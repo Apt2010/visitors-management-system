@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add Product - Dashboard Admin Template</title>
+    <!--
+
+    Template 2108 Dashboard
+
+	http://www.tooplate.com/view/2108-dashboard
+
+    -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600">
+    <!-- https://fonts.google.com/specimen/Open+Sans -->
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <!-- https://fontawesome.com/ -->
+    <link rel="stylesheet" href="jquery-ui-datepicker/jquery-ui.min.css" type="text/css" />
+    <!-- http://api.jqueryui.com/datepicker/ -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- https://getbootstrap.com/ -->
+    <link rel="stylesheet" href="css/tooplate.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+
+    <style>
+        .asterisk {
+            color: red
+        }
+
+        .btn-primary {
+            color: white;
+            background-color: rgb(66, 148, 255);
+        }
+
+        .rounded-pill {
+            border-radius: 25px;
+        }
+    </style>
+
+</head>
+
+<body class="bg02">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-xl navbar-light bg-light">
+                    <a class="navbar-brand" href="index.html">
+                        <i class="fas fa-3x fa-tachometer-alt tm-site-icon"></i>
+                        <h1 class="tm-site-title mb-0">VMS</h1>
+                    </a>
+                    <button class="navbar-toggler ml-auto mr-0" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Dashboard
+                                    <span class="sr-only">(current)</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Employee-management.html">Employee</a>
+                            </li>
+
+                            <li class="nav-item active">
+                                <a class="nav-link" href="Edit-visitor.html">Visitors</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Reports
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#">Daily Report</a>
+                                    <a class="dropdown-item" href="#">Weekly Report</a>
+                                    <a class="dropdown-item" href="#">Yearly Report</a>
+                                </div>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    help
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="help.html">User guide</a>
+                                    <a class="dropdown-item" href="Contact-us.html">Contact support</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link d-flex" href="#">
+                                    <i class="bi bi-bell-fill "></i>
+
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link d-flex" href="Visitors-management-portal.html">
+                                    <i class="far fa-user mr-2 tm-logout-icon"></i>
+                                    <span>Logout</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- row -->
+        <div class="row tm-mt-big mt-5 pt-3">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                <div class="bg-white tm-block">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="tm-block-title d-inline-block">Edit Visitor</h2>
+                        </div>
+                    </div>
+                    <div class="row mt-4 tm-edit-product-row">
+                        <div class="col-xl-7 col-lg-7 col-md-12">
+                            <form action="" class="tm-edit-product-form">
+                                <div class="input-group mb-5">
+                                    <label for="first_name" class="col-xl-3 col-lg-4 col-md-3 col-sm-5 col-form-label">
+                                        First name<span class="asterisk">*</span>
+                                    </label>
+                                    <input id="first_name" name="first_name" type="text"
+                                        class="form-control validate col-xl-7 col-lg-8 col-md-9 col-sm-7" required>
+                                </div>
+                                <div class="input-group mb-5">
+                                    <label for="last_name" class="col-xl-3 col-lg-4 col-md-3 col-sm-5 col-form-label">
+                                        Last name<span class="asterisk">*</span>
+                                    </label>
+                                    <input id="last_name" name="last_name" type="text"
+                                        class="form-control validate col-xl-7 col-lg-8 col-md-9 col-sm-7" required>
+                                </div>
+                                <div class="input-group mb-5">
+                                    <label for="mobile1" class="col-xl-3 col-lg-4 col-md-3 col-sm-5 col-form-label">
+                                        Mobile<span class="asterisk">*</span>
+                                    </label>
+                                    <input id="mobile1" name="mobile1" type="tel"
+                                        class="form-control validate col-xl-7 col-lg-8 col-md-9 col-sm-7" required>
+                                </div>
+                                <div class="input-group mb-5">
+                                    <label for="email1" class="col-xl-3 col-lg-4 col-md-3 col-sm-5 col-form-label">
+                                        Email<span class="asterisk">*</span>
+                                    </label>
+                                    <input id="email1" name="email1" type="email"
+                                        class="form-control validate col-xl-7 col-lg-8 col-md-9 col-sm-7" required>
+                                </div>
+
+                        </div>
+
+                        <!-- Right Column: Image (Moved Up) -->
+                        <div class="col-xl-3 col-lg-4 col-md-12 mb-4 d-inline-block mx-auto">
+                            <p class="px-2 text-center">Image<span class="asterisk">*</span></p>
+                            <div class="tm-product-img-dummy mx-auto">
+                                <i class="fas fa-5x fa-cloud-upload-alt"
+                                    onclick="document.getElementById('fileInput').click();"></i>
+                            </div>
+                            <div class="custom-file mt-3 mb-3 ms-auto">
+                                <input id="fileInput" type="file" style="display:none;" />
+                                <input type="button" class="btn btn-primary d-block mx-auto" value="Upload ..."
+                                    onclick="document.getElementById('fileInput').click();" required />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4 tm-edit-product-row">
+                        <!-- Left Column: Form -->
+
+
+                        <!-- Extra Fields -->
+                        <div class="col-12">
+                            <div class="mb-5  row mx-3">
+                                <label for="email1" class="col-sm-3 col-md-3 col-lg-2 col-form-label">From<span
+                                        class="asterisk">*</span></label>
+                                <div class="col-sm-9 col-md-9 col-lg-10">
+                                    <input id="email1" name="email1" type="text" class="form-control validate" required>
+                                </div>
+                            </div>
+
+                            <div class="mb-5 row mx-3">
+                                <label for="email1" class="col-md-3 col-sm-3 col-lg-2 col-form-label">Purpose of
+                                    visit<span class="asterisk">*</span></label>
+                                <div class="col-sm-9 col-md-9 col-lg-10">
+                                    <input id="email1" name="email1" type="text" class="form-control validate" required>
+                                </div>
+                            </div>
+
+
+                            <div class="row mb-3 mx-3">
+                                <!-- Mobile -->
+
+                                <div class="col-lg-6">
+                                    <div class="form-group row">
+                                        <label for="mobile2" class="col-sm-3 col-form-label">Company</label>
+                                        <div class="col-sm-9">
+                                            <input id="mobile2" name="mobile2" type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Email -->
+                                <div class="col-lg-6">
+                                    <div class="form-group row">
+                                        <label for="email2" class="col-sm-3 col-form-label">Visitors proof<span
+                                                class="asterisk">*</span></label>
+                                        <div class="col-sm-9">
+                                            <input id="email2" name="email2" type="text" class="form-control" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3 mx-3">
+                                <!-- Mobile -->
+                                <div class="col-lg-6">
+                                    <div class="form-group row">
+                                        <label for="mobile2" class="col-sm-3 col-form-label">Host Name<span
+                                                class="asterisk">*</span></label>
+                                        <div class="col-sm-9">
+                                            <input id="mobile2" name="mobile2" type="text" class="form-control"
+                                                required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Email -->
+                                <div class="col-lg-6">
+                                    <div class="form-group row">
+                                        <label for="email2" class="col-sm-3 col-form-label">Host ID<span
+                                                class="asterisk">*</span></label>
+                                        <div class="col-sm-9">
+                                            <input id="email2" name="email2" type="text" class="form-control" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3 mx-3">
+
+                                <!-- Email -->
+                                <div class="col-lg-6">
+                                    <div class="form-group row">
+                                        <label for="email2" class="col-sm-3 col-form-label">OUT Time<span
+                                                class="asterisk">*</span></label>
+                                        <div class="col-sm-9">
+                                            <input id="email2" name="email2" type="time" class="form-control" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-center mb-3">
+
+                                <div class="col-md-3 px-2">
+                                    <a href="Visitors-management.html"
+                                        class="btn btn-primary border-0 rounded-pill text-white w-100 bg-danger">Cancel</a>
+                                </div>
+                                <div class="col-md-3 px-2">
+                                    <a href="Visitors-management.html" type="submit"
+                                        class="btn btn-primary border-0 rounded-pill text-white w-100 bg-success">Update</a>
+                                </div>
+                            </div>
+                        </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <footer class="container-fluid bg-dark text-center text-white py-3 mt-5 mb-0">
+        <p class="mb-0">
+            Copyright &copy; 2018 Admin Dashboard. Created by
+            <a rel="nofollow" href="https://www.tooplate.com" class="text-white tm-footer-link">Tooplate</a>
+        </p>
+    </footer>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- https://jquery.com/download/ -->
+    <script src="jquery-ui-datepicker/jquery-ui.min.js"></script>
+    <!-- https://jqueryui.com/download/ -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- https://getbootstrap.com/ -->
+    <script>
+        $(function () {
+            $('#expire_date').datepicker();
+        });
+    </script>
+</body>
+
+</html>

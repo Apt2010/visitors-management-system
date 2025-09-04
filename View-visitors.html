@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Products Page - Dashboard Template</title>
+    <!--
+
+    Template 2108 Dashboard
+
+	http://www.tooplate.com/view/2108-dashboard
+
+    -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600">
+    <!-- https://fonts.google.com/specimen/Open+Sans -->
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <!-- https://fontawesome.com/ -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- https://getbootstrap.com/ -->
+    <link rel="stylesheet" href="css/tooplate.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+
+    <style>
+        tr:hover td {
+            color: #007bff;
+            /* Bootstrap primary blue */
+        }
+
+        tr:hover #settingsDropdown i {
+            color: #007bff;
+        }
+
+        .d-inline-block {
+            display: inline-block;
+        }
+
+        .rounded-pill {
+            border-radius: 25px;
+        }
+    </style>
+</head>
+
+<body id="reportsPage" class="bg02">
+    <div class="" id="home">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-xl navbar-light bg-light">
+                        <a class="navbar-brand" href="index.html">
+                            <i class="fas fa-3x fa-tachometer-alt tm-site-icon"></i>
+                            <h1 class="tm-site-title mb-0">VMS</h1>
+                        </a>
+                        <button class="navbar-toggler ml-auto mr-0" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mx-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html">Dashboard
+                                        <span class="sr-only">(current)</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="Employee-management.html">Employee</a>
+                                </li>
+
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="View-visitors.html">Visitors</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Reports
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#">Daily Report</a>
+                                        <a class="dropdown-item" href="#">Weekly Report</a>
+                                        <a class="dropdown-item" href="#">Yearly Report</a>
+                                    </div>
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        help
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="help.html">User guide</a>
+                                        <a class="dropdown-item" href="Contact-us.html">Contact support</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link d-flex" href="#">
+                                        <i class="bi bi-bell-fill "></i>
+
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link d-flex" href="Visitors-management-portal.html">
+                                        <i class="far fa-user mr-2 tm-logout-icon"></i>
+                                        <span>Logout</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="mt-5 pt-3">
+                <div class="card shadow-sm p-4">
+                    <h4 class="mb-3 my-3">Visitor Details</h4>
+
+                    <div class="d-flex col-8 justify-content-between text-center my-2 mt-4">
+                        <div>
+                            <p><strong>First Name: </strong> John</p>
+                        </div>
+                        <div>
+                            <p><strong>Last Name: </strong> Doe</p>
+                        </div>
+                    </div>
+                    <div class="d-flex col-8 justify-content-between text-center my-2">
+                        <div>
+                            <p><strong>Mobile number: </strong> 9876567898</p>
+                        </div>
+                        <div>
+                            <p><strong>Email: </strong> john.doe@email.com</p>
+
+                        </div>
+                    </div>
+                    <div class="d-flex col-8 justify-content-between text-center my-2">
+                        <div>
+                            <p><strong>From: </strong>Madurai</p>
+                        </div>
+                        <div>
+                            <p><strong>Purpose of visit: </strong>Interview</p>
+                        </div>
+                    </div>
+                    <div class="d-flex col-8 justify-content-between text-center my-2">
+                        <div>
+                            <p><strong>Company: </strong> apj</p>
+                        </div>
+                        <div>
+                            <p><strong>Visitors proof: </strong>Aadhar</p>
+                        </div>
+                    </div>
+                    <div class="d-flex col-8 justify-content-between text-center my-2">
+                        <div>
+                            <p><strong>Host name: </strong>Suresh</p>
+                        </div>
+                        <div>
+                            <p><strong>Host ID: </strong>Emp001</p>
+                        </div>
+                    </div>
+                    <div class="d-flex col-8 justify-content-between text-center my-2">
+                        <div>
+                            <p><strong>IN Time: </strong> 10:00 AM</p>
+                        </div>
+                        <div>
+                            <p><strong>OUT Time: </strong> 12:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="d-flex col-8 justify-content-between text-center my-2">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="mr-5">
+                                <strong>Image:</strong><br>
+                            </div>
+                            <div>
+                                <img src="img\dash-bg-02.jpg" alt="Visitor Image" class="img-thumbnail" width="150">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center mb-3 mt-5">
+
+                        <div class="col-md-3 px-2">
+                            <a href="Visitors-management.html"
+                                class="btn btn-primary border-0 rounded-pill text-white w-100 bg-danger">Back</a>
+                        </div>
+                        <div class="col-md-3 px-2">
+                            <a href="Edit-visitor.html" type="submit"
+                                class="btn btn-primary border-0 rounded-pill text-white w-100 bg-success">Edit</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <footer class="container-fluid bg-dark text-center text-white py-3 mt-5 mb-0">
+                <p class="mb-0">
+                    Copyright &copy; 2018 Admin Dashboard. Created by
+                    <a rel="nofollow" href="https://www.tooplate.com" class="text-white tm-footer-link">Tooplate</a>
+                </p>
+            </footer>
+            <script src="js/jquery-3.3.1.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+
+            <script>
+                $(function () {
+                    $('.tm-product-name').on('click', function () {
+                        window.location.href = "edit-product.html";
+                    });
+                });
+            </script>
+</body>
+
+</html>

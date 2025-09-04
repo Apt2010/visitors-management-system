@@ -1,0 +1,243 @@
+<div class="input-group mb-3">
+    <label for="category" class="col-xl-4 col-lg-4 col-md-4 col-sm-5 col-form-label">Category</label>
+    <select class="custom-select col-xl-9 col-lg-8 col-md-8 col-sm-7" id="category">
+        <option selected>Select one</option>
+        <option value="1">Cras efficitur lacus</option>
+        <option value="2">Pellentesque molestie</option>
+        <option value="3">Sed feugiat nulla</option>
+    </select>
+</div>
+<div class="input-group mb-3">
+    <label for="expire_date" class="col-xl-4 col-lg-4 col-md-4 col-sm-5 col-form-label">Expire
+        Date</label>
+    <input id="expire_date" name="expire_date" type="text"
+        class="form-control validate col-xl-9 col-lg-8 col-md-8 col-sm-7" data-large-mode="true">
+</div>
+<div class="input-group mb-3">
+    <label for="stock" class="col-xl-4 col-lg-4 col-md-4 col-sm-5 col-form-label">Units In
+        Stock</label>
+    <input id="stock" name="stock" type="text" class="form-control validate col-xl-9 col-lg-8 col-md-7 col-sm-7">
+</div>
+
+<!-- Bottom Mobile/Email -->
+<div class="d-flex col-12">
+    <div class="input-group mb-3 col-6">
+        <label for="mobile3" class="col-xl-3 col-lg-3 col-md-4 col-sm-5 col-form-label">Mobile</label>
+        <input id="mobile3" name="mobile3" type="text"
+            class="form-control validate col-xl-9 col-lg-8 col-md-8 col-sm-7">
+    </div>
+    <div class="input-group mb-3 col-6">
+        <label for="email3" class="col-xl-3 col-lg-3 col-md-4 col-sm-5 col-form-label">Email</label>
+        <input id="email3" name="email3" type="email" class="form-control validate col-xl-9 col-lg-8 col-md-8 col-sm-7">
+    </div>
+</div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User Manual - Visitor Management System</title>
+
+    <!-- Fonts & CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/tooplate.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <style>
+        section {
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-xl navbar-light bg-light">
+                    <a class="navbar-brand" href="index.html">
+                        <i class="fas fa-3x fa-tachometer-alt tm-site-icon"></i>
+                        <h1 class="tm-site-title mb-0">Dashboard</h1>
+                    </a>
+                    <button class="navbar-toggler ml-auto mr-0" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Dashboard</a></li>
+                            <li class="nav-item active"><a class="nav-link" href="Employee-management.html">Employee</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="Visitors-management.html">Visitors</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Reports</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Daily Report</a>
+                                    <a class="dropdown-item" href="#">Weekly Report</a>
+                                    <a class="dropdown-item" href="#">Yearly Report</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Help</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="help.html">User guide</a>
+                                    <a class="dropdown-item" href="#">Contact support</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link d-flex" href="Visitors-management-portal.html">
+                                    <i class="far fa-user mr-2 tm-logout-icon"></i> <span>Logout</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- User Manual Content -->
+    <div class="container mt-5 mb-5">
+        <h2 class="text-center text-primary mb-5">📘 Visitor Management System – User Manual</h2>
+
+        <div class="row">
+            <!-- Card 1 -->
+            <div class="col-md-6 mb-4">
+                <div class="card shadow w-100 h-100">
+                    <div class="card-body">
+                        <h4>🔑 Login</h4>
+                        <p>- Enter your <b>Username</b> and <b>Password</b>.<br>
+                            - Click <b>Login</b> to access the system.<br>
+                            - If you forget your password, contact the <b>Administrator</b>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-6 mb-4">
+                <div class="card shadow w-100 h-100">
+                    <div class="card-body">
+                        <h4>🏠 Dashboard</h4>
+                        <p>- After login, you will land on the <b>Dashboard</b>.<br>
+                            - You can view quick statistics such as:<br>
+                            ✔ Total Visitors Today<br>
+                            ✔ Upcoming Appointments<br>
+                            ✔ Recently Checked-In Visitors
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-6 mb-4">
+                <div class="card shadow w-100 h-100">
+                    <div class="card-body">
+                        <h4>👤 Employee Module</h4>
+                        <p>- Employees can view their <b>own details</b>.<br>
+                            - They can access <b>visitor records</b> relevant to them.<br>
+                            - Employees <b>cannot</b> edit, delete, or block records.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-md-6 mb-4">
+                <div class="card shadow w-100 h-100">
+                    <div class="card-body">
+                        <h4>🧾 Visitor Management</h4>
+                        <p><b>Add Visitor:</b><br>
+                            1. Go to <b>Visitors → Add Visitor</b>.<br>
+                            2. Fill in details: Visitor Name, Purpose, Employee to Meet, Date & Time, ID Proof.<br>
+                            3. Click <b>Save</b>.
+                        </p>
+                        <p><b>View Visitors:</b><br>
+                            - Go to <b>Visitors → View Visitors</b>.<br>
+                            - Use search or filters (date, employee, purpose).
+                        </p>
+                        <p><b>Update Visitor:</b><br>
+                            - Only <b>Admin/Authorized Staff</b> can edit visitor details.
+                        </p>
+                        <p><b>Delete/Block Visitor:</b><br>
+                            - Admin can remove or block visitors if required.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col-md-6 mb-4">
+                <div class="card shadow w-100 h-100">
+                    <div class="card-body">
+                        <h4>📊 Reports</h4>
+                        <p>- Access reports from <b>Reports → Daily / Weekly / Monthly</b>.<br>
+                            - Reports include:<br>
+                            ✔ Number of Visitors per Day<br>
+                            ✔ Visitors per Employee<br>
+                            ✔ Frequent Visitors<br>
+                            - Reports can be <b>exported</b> (PDF/Excel).
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="col-md-6 mb-4">
+                <div class="card shadow w-100 h-100">
+                    <div class="card-body">
+                        <h4>🆘 Help</h4>
+                        <p>- This User Guide.<br>
+                            - Contact Support → Email / Phone Number.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="col-md-6 mb-4">
+                <div class="card shadow w-100 h-100">
+                    <div class="card-body">
+                        <h4>🚪 Logout</h4>
+                        <p>- Always click <b>Logout</b> after use.<br>
+                            - Find the button on the <b>top-right corner</b>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="col-md-6 mb-4">
+                <div class="card shadow w-100 h-100">
+                    <div class="card-body">
+                        <h4>✅ Best Practices</h4>
+                        <ul>
+                            <li>Ensure visitor details are accurate.</li>
+                            <li>Use search & filters to find records quickly.</li>
+                            <li>Admins should review reports regularly.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="w-100 text-white" style="background-color: #333;">
+        <div class="container-fluid text-center py-3">
+            <p class="mb-0">© 2025 Visitor Management System. All Rights Reserved.</p>
+        </div>
+    </div>
+</body>
+
+</html>

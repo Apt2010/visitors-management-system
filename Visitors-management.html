@@ -166,18 +166,35 @@
                 <div class="col-xl-12 col-lg-12 tm-md-12 tm-sm-12 tm-col">
                     <div class="bg-white tm-block h-100">
                         <div class="row d-flex">
-                            <div class="col-md-3 col-sm-12 pr-0">
-                                <h2 class="tm-block-title d-inline-block mb-0">Visitors Management</h2>
+                            <div class="col-12 d-flex align-items-center  mb-3 flex-wrap">
 
+                                <div
+                                    class="col-sm-12 col-lg-8 d-flex ml-2 ml-md-0 justify-content-lg-between justify-content-xl-start row pr-sm-0">
+                                    <!-- Left: Visitors Management -->
+                                    <div
+                                        class="col-sm-12 col-md-12 col-lg-6 col-xl-4 d-flex justify-content-sm-center justify-content-lg-start align-items-center">
+                                        <h2 class="tm-block-title mb-2 mb-md-0">Visitors Management</h2>
+                                    </div>
+
+                                    <!-- Middle: Visitor Activity Log -->
+                                    <div
+                                        class="col-sm-12 col-md-12 col-lg-5 mt-sm-4 mt-lg-0  d-flex justify-content-sm-center justify-content-lg-start">
+                                        <a href="Checked-In-visitors.html" class="btn btn-primary  mx-2 mb-2 mb-md-0">
+                                            <strong>Visitor Activity Log</strong>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Right: Export Records -->
+                                <div
+                                    class="col-md-12 col-lg-4 d-flex justify-content-center justify-content-md-center justify-content-lg-end mt-sm-4 mt-lg-0 pr-sm-0 pr-lg-4 pr-lg-0">
+                                    <button type="button" class="btn btn-outline-secondary m-1" data-toggle="modal"
+                                        data-target="#export">
+                                        <i class="fa fa-download"></i> Export
+                                        Records
+                                    </button>
+                                </div>
                             </div>
-
-                            <a href="Checked-In-visitors.html"
-                                class="d-inline-block border shadow mb-3 py-2  px-3 "><strong>Visitor activity
-                                    log
-                                </strong></a>
-
-
-
                             <div
                                 class="container d-flex justify-content-between align-items-center bg-white px-5 border-bottom pb-3">
                                 <!-- Search -->
@@ -456,11 +473,6 @@
                         </div>
 
                         <div class="tm-table-mt tm-table-actions-row">
-                            <div class="tm-table-actions-col-left">
-                                <button class="btn btn-danger">Export Records<i
-                                        class="bi bi-clipboard-data px-2"></i></button>
-
-                            </div>
                             <div class="tm-table-actions-col-right">
                                 <span class="tm-pagination-label">Page</span>
                                 <nav aria-label="Page navigation" class="d-inline-block">
@@ -528,7 +540,7 @@
             <div class="modal-content">
 
                 <div class="modal-header">
-                    <h5 class="modal-title" id="outTimeModalLabel">Confirm checkout</h5>
+                    <h5 class="modal-title " id="outTimeModalLabel"><i class="bi bi-printer-fill pr-2"></i>Print</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -603,7 +615,9 @@
             <div class="modal-content">
 
                 <div class="modal-header">
-                    <h5 class="modal-title" id="outTimeModalLabel">Confirm checkout</h5>
+                    <h5 class="modal-title" id="outTimeModalLabel"><i class="bi bi-door-open-fill pr-2"></i>Confirm
+                        checkout
+                    </h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -625,6 +639,43 @@
                 <div class="modal-footer mx-auto">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                     <a href="Visitors-management.html" type="button" class="btn btn-primary">Confirm</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="export" tabindex="-1" role="dialog" aria-labelledby="outTimeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title" id="outTimeModalLabel"><i class="fa fa-download"></i> Export Records
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="form px-3 py-5">
+                    <div class="form-group d-flex align-items-start">
+                        <input type="checkbox" id="visitorName">
+                        <label for="visitorName" class="pl-2">Export as PDF </label>
+
+
+                    </div>
+                    <div class="form-group d-flex align-items-start">
+                        <input type="checkbox" id="visitorName">
+                        <label for="visitorName" class="pl-2">Export as Excel </label>
+
+
+                    </div>
+                </div>
+
+                <div class="modal-footer mx-auto">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <a href="Visitors-management.html" type="button" class="btn btn-primary">Export</a>
                 </div>
 
             </div>

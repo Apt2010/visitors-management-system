@@ -150,7 +150,7 @@
                             </ul>
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a class="nav-link d-flex" href="Visitors-management-portal.html">
+                                    <a class="nav-link d-flex" data-toggle="modal" data-target="#logout" href="">
                                         <i class="far fa-user mr-2 tm-logout-icon"></i>
                                         <span>Logout</span>
                                     </a>
@@ -183,17 +183,16 @@
                                 <p class="d-inline-block">5</p>
                             </a>
                             <div
-                                class="container row justify-content-between ml-5 align-items-center bg-white px-5 border-bottom pb-3">
+                                class="container d-flex justify-content-between align-items-center bg-white px-5 border-bottom pb-3">
                                 <!-- Search -->
-                                <div class="input-group w-50 col-5">
+                                <div class="input-group w-50">
                                     <input type="text" class="form-control" placeholder="Search and hit enter">
                                     <button class="btn btn-outline-secondary"><i class="bi bi-search"></i></button>
                                     <button class="btn btn-outline-secondary"><i class="bi bi-x">clear</i></button>
                                 </div>
 
                                 <!-- Action Buttons -->
-                                <div class="col-6">
-
+                                <div class="">
                                     <!-- Filter Button -->
                                     <button type="button" class="btn btn-outline-secondary m-1" data-toggle="modal"
                                         data-target="#sidebarModal">
@@ -474,6 +473,26 @@
 
     <!-- Bootstrap 4 JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <div class="modal fade" id="logout" tabindex="-1" role="dialog" aria-labelledby="outTimeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title" id="outTimeModalLabel">Are you sure you want to logout?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class=" mx-auto my-5">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <a href="Visitors-management-portal.html" type="button" class="btn btn-danger">Logout</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
     <div class="modal fade" id="PrintModal" tabindex="-1" role="dialog" aria-labelledby="outTimeModalLabel"
         aria-hidden="true">

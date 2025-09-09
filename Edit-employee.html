@@ -122,190 +122,200 @@
                             <h2 class="tm-block-title d-inline-block">Edit Employee</h2>
                         </div>
                     </div>
-                    <div class="row mt-4 tm-edit-product-row">
-                        <div class="col-xl-7 col-lg-7 col-md-12">
-                            <form action="" class="tm-edit-product-form">
+                    <form action="Employee-management.html" onsubmit="return Employee_validation_Edit()"
+                        class="tm-edit-product-form">
+                        <div class="row mt-4 tm-edit-product-row">
+                            <div class="col-xl-7 col-lg-7 col-md-12">
+
                                 <div class="input-group mb-5">
-                                    <label for="first_name" class="col-xl-3 col-lg-4 col-md-3 col-sm-5 col-form-label">
+                                    <label for="First-name" class="col-xl-3 col-lg-4 col-md-3 col-sm-5 col-form-label">
                                         First name<span class="asterisk">*</span>
                                     </label>
-                                    <input id="first_name" name="first_name" type="text" required
-                                        class="form-control validate col-xl-7 col-lg-8 col-md-9 col-sm-7" required>
+                                    <input id="First-name" name="First-name" type="text"
+                                        class="form-control validate col-xl-7 col-lg-8 col-md-9 col-sm-7">
                                 </div>
                                 <div class="input-group mb-5">
-                                    <label for="last_name" class="col-xl-3 col-lg-4 col-md-3 col-sm-5 col-form-label">
+                                    <label for="Last-name" class="col-xl-3 col-lg-4 col-md-3 col-sm-5 col-form-label">
                                         Last name<span class="asterisk">*</span>
                                     </label>
-                                    <input id="last_name" name="last_name" type="text"
-                                        class="form-control validate col-xl-7 col-lg-8 col-md-9 col-sm-7" required>
+                                    <input id="Last-name" name="Last-name" type="text"
+                                        class="form-control validate col-xl-7 col-lg-8 col-md-9 col-sm-7">
                                 </div>
                                 <div class="input-group mb-5">
-                                    <label for="mobile1" class="col-xl-3 col-lg-4 col-md-3 col-sm-5 col-form-label">
+                                    <label for="Emp-ID" class="col-xl-3 col-lg-4 col-md-3 col-sm-5 col-form-label">
                                         Emp ID<span class="asterisk">*</span>
                                     </label>
-                                    <input id="mobile1" name="mobile1" type="text"
-                                        class="form-control validate col-xl-7 col-lg-8 col-md-7 col-sm-7" required>
+                                    <input id="Emp-ID" name="Emp-ID" type="text"
+                                        class="form-control validate col-xl-7 col-lg-8 col-md-9 col-sm-7">
                                 </div>
                                 <div class="input-group mb-5">
-                                    <label for="email1" class="col-xl-3 col-lg-4 col-md-3 col-sm-5 col-form-label">
+                                    <label for="Department" class="col-xl-3 col-lg-4 col-md-3 col-sm-5 col-form-label">
                                         Department<span class="asterisk">*</span>
                                     </label>
-                                    <input id="email1" name="email1" type="text"
-                                        class="form-control validate col-xl-7 col-lg-8 col-md-7 col-sm-7" required>
+                                    <input id="Department" name="Department" type="text"
+                                        class="form-control validate col-xl-7 col-lg-8 col-md-9 col-sm-7">
                                 </div>
                                 <div class="input-group mb-5">
-                                    <label for="email1" class="col-xl-3 col-lg-4 col-md-3 col-sm-5 col-form-label">
+                                    <label for="Department-block"
+                                        class="col-xl-3 col-lg-4 col-md-3 col-sm-5 col-form-label">
                                         Department block<span class="asterisk">*</span>
                                     </label>
-                                    <input id="email1" name="email1" type="text"
-                                        class="form-control validate col-xl-7 col-lg-8 col-md-7 col-sm-7" required>
+                                    <input id="Department-block" name="Department-block" type="text"
+                                        class="form-control validate col-xl-7 col-lg-8 col-md-9 col-sm-7">
                                 </div>
 
-
-                        </div>
-
-                        <!-- Right Column: Image (Moved Up) -->
-                        <div class="col-xl-4 col-lg-4 col-md-12 mb-4 d-inline-block mx-auto">
-                            <p class="px-2">Image<span class="asterisk">*</span></p>
-                            <div class="tm-product-img-dummy ms-auto">
-                                <i class="fas fa-5x fa-cloud-upload-alt"
-                                    onclick="document.getElementById('fileInput').click();"></i>
-                            </div>
-                            <div class="custom-file mt-3 mb-3 ms-auto">
-                                <input id="fileInput" type="file" style="display:none;" />
-                                <input type="button" class="btn btn-primary d-block ms-auto" value="Upload ..."
-                                    onclick="document.getElementById('fileInput').click();" required />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mt-4 tm-edit-product-row">
-                        <!-- Left Column: Form -->
-
-
-                        <!-- Extra Fields -->
-                        <div class="col-12">
-                            <div class="mb-5 row mx-3">
-                                <label for="email1" class="col-md-3 col-sm-3 col-lg-2 col-form-label">Role<span
-                                        class="asterisk">*</span></label>
-                                <div class="col-sm-9 col-md-9 col-lg-10">
-                                    <input id="email1" name="email1" type="text" class="form-control validate" required>
-                                </div>
-                            </div>
-
-                            <div class="mb-5 row mx-3">
-                                <label for="email1" class="col-md-3 col-sm-3 col-lg-2 col-form-label">Email<span
-                                        class="asterisk">*</span></label>
-                                <div class="col-sm-9 col-md-9 col-lg-10">
-                                    <input id="email1" name="email1" type="email" class="form-control validate"
-                                        required>
-                                </div>
-                            </div>
-
-                            <div class="row mb-3 mx-3">
-                                <!-- Mobile -->
-
-                                <div class="col-md-6">
-                                    <div class="form-group row">
-                                        <label for="mobile2" class="col-sm-3 col-form-label">Mobile number</label>
-                                        <div class="col-sm-9">
-                                            <input id="mobile2" name="mobile2" type="tel" class="form-control">
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Email -->
-                                <div class="col-lg-6">
-                                    <div class="form-group row">
-                                        <label for="email2" class="col-sm-3 col-form-label">Shift<span
-                                                class="asterisk">*</span></label>
-                                        <div class="col-sm-9">
-                                            <input id="email2" name="email2" type="text" class="form-control" required>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row mb-3 mx-3">
-                                <!-- Mobile -->
-                                <div class="col-lg-6">
-                                    <div class="form-group row">
-                                        <label for="mobile2" class="col-sm-3 col-form-label">Date of joining<span
-                                                class="asterisk">*</span></label>
-                                        <div class="col-sm-9">
-                                            <input id="mobile2" name="mobile2" type="date" class="form-control"
-                                                required>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Email -->
-                                <div class="col-lg-6">
-                                    <div class="form-group row">
-                                        <label for="email2" class="col-sm-3 col-form-label">Salary<span
-                                                class="asterisk">*</span></label>
-                                        <div class="col-sm-9">
-                                            <input id="email2" name="email2" type="number" class="form-control"
-                                                required>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row mb-3 mx-3">
-                                <!-- Mobile -->
-                                <div class="col-lg-6">
-                                    <div class="form-group row">
-                                        <label for="mobile2" class="col-sm-3 col-form-label">Date of birth<span
-                                                class="asterisk">*</span></label>
-                                        <div class="col-sm-9">
-                                            <input id="mobile2" name="mobile2" type="date" class="form-control"
-                                                required>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Email -->
-                                <div class="col-lg-6">
-                                    <div class="form-group row">
-                                        <label for="email2" class="col-sm-3 col-form-label">Address<span
-                                                class="asterisk">*</span></label>
-                                        <div class="col-sm-9">
-                                            <input id="email2" name="email2" type="text" class="form-control" required>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row mb-3 mx-3">
-                                <!-- Mobile -->
-                                <div class="col-lg-6">
-                                    <div class="form-group row">
-                                        <label for="mobile2" class="col-sm-3 col-form-label">Username<span
-                                                class="asterisk">*</span></label>
-                                        <div class="col-sm-9">
-                                            <input id="mobile2" name="mobile2" type="text" class="form-control"
-                                                required>
-                                        </div>
-                                    </div>
-                                </div>
 
                             </div>
 
-                            <div class="d-flex justify-content-center mb-3">
-                                <div class="col-md-3 px-2">
-                                    <a href="Edit-employee.html" type="submit"
-                                        class="btn btn-primary border-0 rounded-pill text-white w-100 bg-danger">Cancel</a>
+                            <!-- Right Column: Image (Moved Up) -->
+                            <div class="col-xl-4 col-lg-4 col-md-12 mb-4 d-inline-block mx-auto">
+                                <p class="px-2">Image<span class="asterisk">*</span></p>
+                                <div class="tm-product-img-dummy ms-auto">
+                                    <i class="fas fa-5x fa-cloud-upload-alt"
+                                        onclick="document.getElementById('fileInput').click();"></i>
                                 </div>
-                                <div class="col-md-3 px-2">
-                                    <a href="Employee-management.html"
-                                        class="btn btn-primary border-0 rounded-pill text-white w-100 bg-success">Update</a>
+                                <div class="custom-file mt-3 mb-3 ms-auto">
+                                    <input id="fileInput" type="file" style="display:none;" />
+                                    <input type="button" class="btn btn-primary d-block ms-auto" value="Upload ..."
+                                        onclick="document.getElementById('fileInput').click();" />
                                 </div>
                             </div>
                         </div>
-                        </form>
+                        <div class="row mt-4 tm-edit-product-row">
+                            <!-- Left Column: Form -->
 
-                    </div>
+
+                            <!-- Extra Fields -->
+                            <div class="col-12">
+                                <div class="mb-5 row">
+                                    <label for="Role"
+                                        class="col-md-3 col-sm-12 col-lg-2 col-form-label pl-sm-0 pl-md-4">Role<span
+                                            class="asterisk">*</span></label>
+                                    <div class="col-sm-12 col-md-9 col-lg-10">
+                                        <input id="Role" name="Role" type="text" class="form-control validate">
+                                    </div>
+                                </div>
+
+                                <div class="mb-5 row">
+                                    <label for="Email1"
+                                        class="col-md-3 col-sm-3 col-lg-2 col-form-label pl-sm-0 pl-md-4">Email<span
+                                            class="asterisk">*</span></label>
+                                    <div class="col-sm-9 col-md-9 col-lg-10">
+                                        <input id="Email1" name="Email1" type="email" class="form-control validate">
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <!-- Mobile -->
+
+
+                                    <div class="col-lg-6">
+                                        <div class="form-group row">
+                                            <label for="Mobile2" class="col-sm-3 col-form-label pl-sm-0 pl-md-4">Mobile
+                                                number<span class="asterisk">*</span></label>
+                                            <div class="col-sm-9">
+                                                <input id="Mobile2" name="Mobile2" type="tel" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Email -->
+                                    <div class="col-lg-6">
+                                        <div class="form-group row">
+                                            <label for="Shift"
+                                                class="col-sm-3 col-form-label pl-sm-0 pl-md-4">Shift<span
+                                                    class="asterisk">*</span></label>
+                                            <div class="col-sm-9">
+                                                <input id="Shift" name="Shift" type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <!-- Mobile -->
+                                    <div class="col-lg-6">
+                                        <div class="form-group row">
+                                            <label for="Date-of-joining"
+                                                class="col-sm-3 col-form-label pl-sm-0 pl-md-4">Date of
+                                                joining<span class="asterisk">*</span></label>
+                                            <div class="col-sm-9">
+                                                <input id="Date-of-joining" name="Date-of-joining" type="date"
+                                                    class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Email -->
+                                    <div class="col-lg-6">
+                                        <div class="form-group row">
+                                            <label for="Salary"
+                                                class="col-sm-3 col-form-label pl-sm-0 pl-md-4">Salary<span
+                                                    class="asterisk">*</span></label>
+                                            <div class="col-sm-9">
+                                                <input id="Salary" name="Salary" type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <!-- Mobile -->
+                                    <div class="col-lg-6">
+                                        <div class="form-group row">
+                                            <label for="Date-of-birth"
+                                                class="col-sm-3 col-form-label pl-sm-0 pl-md-4">Date of
+                                                birth<span class="asterisk">*</span></label>
+                                            <div class="col-sm-9">
+                                                <input id="Date-of-birth" name="Date-of-birth" type="date"
+                                                    class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Email -->
+                                    <div class="col-lg-6">
+                                        <div class="form-group row">
+                                            <label for="Address"
+                                                class="col-sm-3 col-form-label pl-sm-0 pl-md-4">Address<span
+                                                    class="asterisk">*</span></label>
+                                            <div class="col-sm-9">
+                                                <input id="Address" name="Address" type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <!-- Mobile -->
+                                    <div class="col-lg-6">
+                                        <div class="form-group row">
+                                            <label for="Username"
+                                                class="col-sm-3 col-form-label pl-sm-0 pl-md-4 ">Username<span
+                                                    class="asterisk">*</span></label>
+                                            <div class="col-sm-9">
+                                                <input id="Username" name="Username" type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-center mb-3">
+                                    <div class="col-md-3 px-2">
+                                        <a href="Employee-management.html"
+                                            class="btn btn-primary border-0 rounded-pill text-white w-100 bg-danger">Cancel</a>
+                                    </div>
+                                    <div class="col-md-3 px-2">
+                                        <button href="Employee-management.html" type="submit"
+                                            class="btn btn-primary border-0 rounded-pill text-white w-100 bg-success">Submit</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
                 </div>
             </div>
         </div>
-
-
-
     </div>
+
+
     <footer class="container-fluid bg-dark text-center text-white py-3 mt-5 mb-0">
         <p class="mb-0">
             Copyright &copy; 2018 Admin Dashboard. Created by
@@ -320,6 +330,8 @@
     <!-- https://jqueryui.com/download/ -->
     <script src="js/bootstrap.min.js"></script>
     <!-- https://getbootstrap.com/ -->
+    <script src="js/validations.js"></script>
+
     <div class="modal fade" id="logout" tabindex="-1" role="dialog" aria-labelledby="outTimeModalLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">

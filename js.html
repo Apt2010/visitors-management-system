@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <P id="para">hi leo</P>
+    <button type="button" onclick="myfunction()">click me</button>
+
+    <h2>What Can JavaScript Do?</h2>
+
+    <p id="demo">JavaScript can change HTML content.</p>
+
+    <button type="button" onclick="document.getElementById('demo').innerHTML = 'Hello JavaScript!'">Click Me!</button>
+
+
+    <h2>What Can JavaScript Do?</h2>
+
+    <p>JavaScript can change HTML attribute values.</p>
+
+    <p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+
+    <button onclick="document.getElementById('myImage').src='img/Bulb-on.jpg'">Turn on the light</button>
+
+    <img id="myImage" src="img/Bulb-off.jpg" style="width:120px">
+
+    <button onclick="document.getElementById('myImage').src='img/Bulb-off.jpg'">Turn off the light</button>
+
+
+    <img id="image1" src="img/Bulb-off.jpg">
+    <button onclick="document.getElementById('image1').src='img/Bulb-on.jpg'">Turn on the light</button>
+
+    <button onclick="document.getElementById('image1').src='img/Bulb-off.jpg'">Turn off the light</button>
+
+    <p id="newpara"> This is a old paragraph</p>
+    <script>
+        document.getElementById('newpara').innerHTML = 'this is paragraph'
+    </script>
+    <p>You can declare many variables in one statement.</p>
+
+    <p id="demo"></p>
+
+    <script>
+        let person = "John Doe", carName = "Volvo", price = 200;
+
+        let employee_name = "leo", employee_id = "Empl"
+
+        document.getElementById("demo").innerHTML = carName;
+    </script>
+
+    <p id="para2">chumma para</p>
+
+    <script>
+
+        const person2 = { "name": "leo", "role": "develper" }
+
+        person2.name = "xavier"
+
+        document.getElementById("para2").innerHTML = person2.name + " is a " + person2.role;
+    </script>
+
+    <script src="jasc.js"></script>
+
+
+</body>
+
+</html>

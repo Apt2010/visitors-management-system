@@ -123,151 +123,142 @@
                             <h2 class="tm-block-title d-inline-block">Edit Visitor</h2>
                         </div>
                     </div>
-                    <div class="row mt-4 tm-edit-product-row">
-                        <div class="col-xl-7 col-lg-7 col-md-12">
-                            <form action="" class="tm-edit-product-form">
+                    <form action="Visitors-management.html" onsubmit="return visitor_validation_edit()"
+                        class="tm-edit-product-form">
+                        <div class="row mt-4 tm-edit-product-row">
+                            <div class="col-xl-7 col-lg-7 col-md-12">
+
                                 <div class="input-group mb-5">
-                                    <label for="first_name" class="col-xl-3 col-lg-4 col-md-3 col-sm-5 col-form-label">
+                                    <label for="first-name" class="col-xl-3 col-lg-4 col-md-3 col-sm-5 col-form-label">
                                         First name<span class="asterisk">*</span>
                                     </label>
-                                    <input id="first_name" name="first_name" type="text"
-                                        class="form-control validate col-xl-7 col-lg-8 col-md-9 col-sm-7" required>
+                                    <input id="first-name" name="first_name" type="text"
+                                        class="form-control validate col-xl-7 col-lg-8 col-md-9 col-sm-7">
                                 </div>
                                 <div class="input-group mb-5">
                                     <label for="last_name" class="col-xl-3 col-lg-4 col-md-3 col-sm-5 col-form-label">
                                         Last name<span class="asterisk">*</span>
                                     </label>
-                                    <input id="last_name" name="last_name" type="text"
-                                        class="form-control validate col-xl-7 col-lg-8 col-md-9 col-sm-7" required>
+                                    <input id="last-name" name="last_name" type="text"
+                                        class="form-control validate col-xl-7 col-lg-8 col-md-9 col-sm-7">
                                 </div>
                                 <div class="input-group mb-5">
                                     <label for="mobile1" class="col-xl-3 col-lg-4 col-md-3 col-sm-5 col-form-label">
                                         Mobile<span class="asterisk">*</span>
                                     </label>
                                     <input id="mobile1" name="mobile1" type="tel"
-                                        class="form-control validate col-xl-7 col-lg-8 col-md-9 col-sm-7" required>
+                                        class="form-control validate col-xl-7 col-lg-8 col-md-9 col-sm-7">
                                 </div>
                                 <div class="input-group mb-5">
                                     <label for="email1" class="col-xl-3 col-lg-4 col-md-3 col-sm-5 col-form-label">
                                         Email<span class="asterisk">*</span>
                                     </label>
                                     <input id="email1" name="email1" type="email"
-                                        class="form-control validate col-xl-7 col-lg-8 col-md-9 col-sm-7" required>
+                                        class="form-control validate col-xl-7 col-lg-8 col-md-9 col-sm-7">
                                 </div>
 
-                        </div>
-
-                        <!-- Right Column: Image (Moved Up) -->
-                        <div class="col-xl-3 col-lg-4 col-md-12 mb-4 d-inline-block mx-auto">
-                            <p class="px-2 text-center">Image<span class="asterisk">*</span></p>
-                            <div class="tm-product-img-dummy mx-auto">
-                                <i class="fas fa-5x fa-cloud-upload-alt"
-                                    onclick="document.getElementById('fileInput').click();"></i>
-                            </div>
-                            <div class="custom-file mt-3 mb-3 ms-auto">
-                                <input id="fileInput" type="file" style="display:none;" />
-                                <input type="button" class="btn btn-primary d-block mx-auto" value="Upload ..."
-                                    onclick="document.getElementById('fileInput').click();" required />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mt-4 tm-edit-product-row">
-                        <!-- Left Column: Form -->
-
-
-                        <!-- Extra Fields -->
-                        <div class="col-12">
-                            <div class="mb-5  row mx-3">
-                                <label for="email1" class="col-sm-3 col-md-3 col-lg-2 col-form-label">From<span
-                                        class="asterisk">*</span></label>
-                                <div class="col-sm-9 col-md-9 col-lg-10">
-                                    <input id="email1" name="email1" type="text" class="form-control validate" required>
-                                </div>
                             </div>
 
-                            <div class="mb-5 row mx-3">
-                                <label for="email1" class="col-md-3 col-sm-3 col-lg-2 col-form-label">Purpose of
-                                    visit<span class="asterisk">*</span></label>
-                                <div class="col-sm-9 col-md-9 col-lg-10">
-                                    <input id="email1" name="email1" type="text" class="form-control validate" required>
+                            <!-- Right Column: Image (Moved Up) -->
+                            <div class="col-xl-3 col-lg-4 col-md-12 mb-4 d-inline-block mx-auto">
+                                <p class="px-2">Image<span class="asterisk">*</span></p>
+                                <div class="tm-product-img-dummy ms-auto">
+                                    <i class="fas fa-5x fa-cloud-upload-alt"
+                                        onclick="document.getElementById('fileInput').click();"></i>
                                 </div>
-                            </div>
-
-
-                            <div class="row mb-3 mx-3">
-                                <!-- Mobile -->
-
-                                <div class="col-lg-6">
-                                    <div class="form-group row">
-                                        <label for="mobile2" class="col-sm-3 col-form-label">Company</label>
-                                        <div class="col-sm-9">
-                                            <input id="mobile2" name="mobile2" type="text" class="form-control">
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Email -->
-                                <div class="col-lg-6">
-                                    <div class="form-group row">
-                                        <label for="email2" class="col-sm-3 col-form-label">Visitors proof<span
-                                                class="asterisk">*</span></label>
-                                        <div class="col-sm-9">
-                                            <input id="email2" name="email2" type="text" class="form-control" required>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row mb-3 mx-3">
-                                <!-- Mobile -->
-                                <div class="col-lg-6">
-                                    <div class="form-group row">
-                                        <label for="mobile2" class="col-sm-3 col-form-label">Host Name<span
-                                                class="asterisk">*</span></label>
-                                        <div class="col-sm-9">
-                                            <input id="mobile2" name="mobile2" type="text" class="form-control"
-                                                required>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Email -->
-                                <div class="col-lg-6">
-                                    <div class="form-group row">
-                                        <label for="email2" class="col-sm-3 col-form-label">Host ID<span
-                                                class="asterisk">*</span></label>
-                                        <div class="col-sm-9">
-                                            <input id="email2" name="email2" type="text" class="form-control" required>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row mb-3 mx-3">
-
-                                <!-- Email -->
-                                <div class="col-lg-6">
-                                    <div class="form-group row">
-                                        <label for="email2" class="col-sm-3 col-form-label">OUT Time<span
-                                                class="asterisk">*</span></label>
-                                        <div class="col-sm-9">
-                                            <input id="email2" name="email2" type="time" class="form-control" required>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="d-flex justify-content-center mb-3">
-
-                                <div class="col-md-3 px-2">
-                                    <a href="Visitors-management.html"
-                                        class="btn btn-primary border-0 rounded-pill text-white w-100 bg-danger">Cancel</a>
-                                </div>
-                                <div class="col-md-3 px-2">
-                                    <a href="Visitors-management.html" type="submit"
-                                        class="btn btn-primary border-0 rounded-pill text-white w-100 bg-success">Update</a>
+                                <div class="custom-file mt-3 mb-3 ms-auto">
+                                    <input id="fileInput" type="file" style="display:none;" />
+                                    <input type="button" class="btn btn-primary d-block ms-auto" value="Upload ..."
+                                        onclick="document.getElementById('fileInput').click();" />
                                 </div>
                             </div>
                         </div>
-                        </form>
+                        <div class="row mt-4 tm-edit-product-row">
+                            <!-- Left Column: Form -->
 
-                    </div>
+
+                            <!-- Extra Fields -->
+                            <div class="col-12">
+                                <div class="mb-5  row mx-3">
+                                    <label for="email1" class="col-sm-3 col-md-3 col-lg-2 col-form-label">From<span
+                                            class="asterisk">*</span></label>
+                                    <div class="col-sm-9 col-md-9 col-lg-10">
+                                        <input id="from" name="email1" type="text" class="form-control validate">
+                                    </div>
+                                </div>
+
+                                <div class="mb-5 row mx-3">
+                                    <label for="email1" class="col-md-3 col-sm-3 col-lg-2 col-form-label">Purpose of
+                                        visit<span class="asterisk">*</span></label>
+                                    <div class="col-sm-9 col-md-9 col-lg-10">
+                                        <input id="purpose" name="email1" type="text" class="form-control validate">
+                                    </div>
+                                </div>
+
+
+                                <div class="row mb-3 mx-3">
+                                    <!-- Mobile -->
+
+                                    <div class="col-lg-6">
+                                        <div class="form-group row">
+                                            <label for="mobile2" class="col-sm-3 col-form-label">Company</label>
+                                            <div class="col-sm-9">
+                                                <input id="company" name="mobile2" type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Email -->
+                                    <div class="col-lg-6">
+                                        <div class="form-group row">
+                                            <label for="email2" class="col-sm-3 col-form-label">Visitors proof<span
+                                                    class="asterisk">*</span></label>
+                                            <div class="col-sm-9">
+                                                <input id="visitors-proof" name="email2" type="text"
+                                                    class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3 mx-3">
+                                    <!-- Mobile -->
+                                    <div class="col-lg-6">
+                                        <div class="form-group row">
+                                            <label for="mobile2" class="col-sm-3 col-form-label">Host Name<span
+                                                    class="asterisk">*</span></label>
+                                            <div class="col-sm-9">
+                                                <input id="host-name" name="mobile2" type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Email -->
+                                    <div class="col-lg-6">
+                                        <div class="form-group row">
+                                            <label for="email2" class="col-sm-3 col-form-label">Host ID<span
+                                                    class="asterisk">*</span></label>
+                                            <div class="col-sm-9">
+                                                <input id="host-id" name="email2" type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="d-flex justify-content-center mb-3">
+
+                                    <div class="col-md-3 px-2">
+                                        <a href="Visitors-management.html"
+                                            class="btn btn-primary border-0 rounded-pill text-white w-100 bg-danger">Cancel</a>
+                                    </div>
+                                    <div class="col-md-3 px-2">
+                                        <button type="submit"
+                                            class="btn btn-primary border-0 rounded-pill text-white w-100 bg-success">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -287,6 +278,9 @@
     <!-- https://jqueryui.com/download/ -->
     <script src="js/bootstrap.min.js"></script>
     <!-- https://getbootstrap.com/ -->
+    <script src="../js/validations.js"></script>
+
+
     <div class="modal fade" id="logout" tabindex="-1" role="dialog" aria-labelledby="outTimeModalLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">

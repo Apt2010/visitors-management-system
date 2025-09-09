@@ -43,14 +43,14 @@
                     <div class="row mt-2">
                         <div class="col-12">
 
-                            <form class="">
+                            <form action="index.html" onsubmit="return Employee_login_validation()">
                                 <!-- Username -->
                                 <div class="mb-3">
                                     <label for="username" class="form-label">Username<span
                                             class="red-asterisk">*</span></label>
                                     <div class="d-flex">
                                         <input type="text" class="col-11 form-control d-inline" id="username"
-                                            placeholder="Enter your Username" required>
+                                            placeholder="Enter your Username">
                                         <i class="bi bi-person-circle  col-2 text-primary"
                                             style="font-size:xx-large;"></i>
                                     </div>
@@ -62,7 +62,7 @@
                                             class="red-asterisk">*</span></label>
                                     <div class="d-flex">
                                         <input type="password" class="col-11 d-inline form-control" id="password"
-                                            placeholder="Enter your password" required>
+                                            placeholder="Enter your password">
                                         <i class="bi bi-key-fill col-2 fs-4 text-primary"
                                             style="font-size:xx-large;"></i>
                                     </div>
@@ -70,7 +70,7 @@
 
 
                                 <!-- Login button -->
-                                <a href="index.html" type="submit" class="btn btn-primary w-100">Login</a>
+                                <button href="index.html" type="submit" class="btn btn-primary w-100">Login</button>
 
                                 <!-- Forgot Username & Password -->
                                 <div class="d-flex justify-content-center mt-3">
@@ -91,6 +91,10 @@
             <a rel="nofollow" href="https://www.tooplate.com" class="text-white tm-footer-link">Tooplate</a>
         </p>
     </footer>
+
+
+    <script src="../js/validations.js"></script>
+
 </body>
 
 </html>

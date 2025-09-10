@@ -170,16 +170,20 @@
                             <!-- Right Column: Image (Moved Up) -->
                             <div class="col-xl-4 col-lg-4 col-md-12 mb-4 d-inline-block mx-auto">
                                 <p class="px-2">Image<span class="asterisk">*</span></p>
-                                <div class="tm-product-img-dummy ms-auto">
+                                <div class="tm-product-img-dummy ms-auto" id="imagePreview"
+                                    style="width: 200px; height: 200px; border: 1px dashed #ccc; overflow: hidden;">
                                     <i class="fas fa-5x fa-cloud-upload-alt"
                                         onclick="document.getElementById('fileInput').click();"></i>
                                 </div>
                                 <div class="custom-file mt-3 mb-3 ms-auto">
-                                    <input id="fileInput" type="file" style="display:none;" />
-                                    <input type="button" class="btn btn-primary d-block ms-auto" value="Upload ..."
-                                        onclick="document.getElementById('fileInput').click();" />
+                                    <input id="fileInput" type="file" accept="image/*" onchange="previewImage(event)" />
+                                    <!-- <input id="upload" type="button" class="btn btn-primary d-block ms-auto"
+                                        value="Upload ..." onclick="document.getElementById('fileInput').click();" /> -->
                                 </div>
                             </div>
+
+
+
                         </div>
                         <div class="row mt-4 tm-edit-product-row">
                             <!-- Left Column: Form -->

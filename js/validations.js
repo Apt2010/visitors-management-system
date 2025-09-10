@@ -48,7 +48,7 @@ function Employee_login_validation() {
 }
 
 function Employee_validation_Add() {
-    let image = document.getElementById('fileInput').value;
+
     let First_name = document.getElementById('First-name').value.trim();
     let Last_name = document.getElementById('Last-name').value.trim();
     let Emp_id = document.getElementById('Emp-ID').value.trim();
@@ -63,24 +63,20 @@ function Employee_validation_Add() {
     let Date_of_birth = document.getElementById('Date-of-birth').value.trim();
     let Address = document.getElementById('Address').value.trim();
     let username = document.getElementById('Username').value.trim();
-    let password = document.getElementById('Password').value.trim();
 
 
 
+    let imageField = document.getElementById('fileInput');
 
-    if (password) {
-        if (password === "") {
-            alert("Password is required");
-            return false;
-        }
-        if (password.length < 6) {
-            alert("Password must be at least 6 characters long");
-            return false;
-        }
+    if (!imageField.files || imageField.files.length === 0) {
+        alert("Uploading image is required");
+        return false;
     }
 
 
+    let image = document.getElementById('fileInput').value;
     if (image === "") {
+
         alert("uploading image is required")
         return false;
     }
@@ -162,14 +158,18 @@ function Employee_validation_Add() {
         return false;
     }
 
-    if (password === "") {
-        alert("Password is required")
-        return false;
-    }
 
-    if (password.length < 6) {
-        alert("Password must be at least 6 characters long")
-        return false;
+    let password = document.getElementById('Password').value.trim();
+    if (password) {
+
+        if (password === "") {
+            alert("Password is required");
+            return false;
+        }
+        if (password.length < 6) {
+            alert("Password must be at least 6 characters long");
+            return false;
+        }
     }
 
 
@@ -298,7 +298,16 @@ function visitor_validation_add() {
     let Visitors_proof = document.getElementById('visitors-proof').value.trim();
     let Host_name = document.getElementById('host-name').value.trim();
     let Host_id = document.getElementById('host-id').value.trim();
-    let In_time = document.getElementById('in-time').value.trim();
+    let Date = document.getElementById('Date').value.trim();
+    let In_time = document.getElementById('intimebtn').value.trim();
+
+
+
+    if (In_time === "") {
+        alert("In_time is required")
+        return false;
+    }
+
 
 
 
@@ -335,37 +344,51 @@ function visitor_validation_add() {
     }
 
     if (Purpose_of_visit === "") {
-        alert("Address is required")
+        alert("Purpose_of_visit is required")
         return false;
     }
 
     if (Visitors_proof === "") {
-        alert("Address is required")
+        alert("Visitors_proof is required")
         return false;
     }
 
     if (Host_name === "") {
-        alert("First_name is required")
+        alert("Host_name is required")
         return false;
     }
 
     if (Host_id === "") {
-        alert("First_name is required")
+        alert("Host_id is required")
         return false;
     }
 
-
-    if (In_time === "") {
-        alert("First_name is required")
+    if (Date === "") {
+        alert("Date is required")
         return false;
     }
-
 
 
 
     return true;
 
 }
+
+
+
+function captureTime() {
+    let now = new Date();
+    let time = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+    // Store in hidden input
+    document.getElementById('intime').value = time;
+
+    // Show to user
+    document.getElementById('intimeDisplay').innerText = time;
+}
+
+
+
 
 function visitor_validation_edit() {
     let image = document.getElementById('fileInput').value;
@@ -433,12 +456,14 @@ function visitor_validation_edit() {
         return false;
     }
 
+
+
     return true;
 
 }
 
 function intime_button() {
-    document.getElementById('intime').date
+    document.getElementById('intimebtn').date
 
 }
 
@@ -452,9 +477,84 @@ function captureTime() {
 
     let currentTime = `${hours}:${minutes}:${seconds}`;
 
-    alert("Captured time: " + currentTime);
+    document.getElementById('intimebtn').innerHTML = currentTime;
 
-    // If you want to store it in a hidden input:
-    // document.getElementById('capturedTime').value = currentTime;
+    // Store time for visitors page
+    localStorage.setItem('inTimebtn', currentTime);
+
+
+}
+function captureTime() {
+    let now = new Date();
+    let hours = String(now.getHours()).padStart(2, '0');
+    let minutes = String(now.getMinutes()).padStart(2, '0');
+    let seconds = String(now.getSeconds()).padStart(2, '0');
+
+    let currentTime = `${hours}:${minutes}:${seconds}`;
+    document.getElementById('intimebtn').innerHTML = currentTime;
+
+
+}
+window.onload = function () {
+    let capturedTime = localStorage.getItem('inTimebtn');
+    if (capturedTime) {
+        document.getElementById('intimeCell').innerText = capturedTime;
+    }
+};
+
+
+
+function previewImage(event) {
+    let file = event.target.files[0];
+    if (file) {
+        let allowedTypes = ["image/jpeg", "image/png"];
+        if (!allowedTypes.includes(file.type)) {
+            alert("Only JPG and PNG formats are allowed!");
+            event.target.value = ""; // Clear the input
+            return false;
+        }
+
+        let reader = new FileReader();
+        reader.onload = function (e) {
+            document.getElementById('imagePreview').innerHTML =
+                `<img src="${e.target.result}" alt="Preview" style="max-width:100%; max-height: 100%; object-fit: contain;" />`;
+        }
+        reader.readAsDataURL(file);
+    }
+    document.getElementById('upload').value = "uploaded"
+}
+
+
+function print() {
+    document.getElementById('print').value = window.print();
+}
+
+document.getElementById('export').addEventListener('click', function (e) {
+    let pdf = document.getElementById('pdf').checked;
+    let excel = document.getElementById('excel').checked;
+
+    if (!pdf && !excel) {
+        alert("Please select at least one format to export.");
+        e.preventDefault();
+        return false;
+    }
+
+});
+
+
+function outtime() {
+    let feedback1 = document.getElementById('feedback').value.trim();
+    if (feedback1 === "") {
+        alert("Visitor feedback is required");
+        return false;
+    }
+
+    let outtimeField1 = document.getElementById('outTimeField').value.trim();
+    if (outtimeField1 === "") {
+        alert("Out time field is required");
+        return false;
+    }
+
+    return true;
 }
 

@@ -185,7 +185,7 @@
                             <div
                                 class="container d-flex justify-content-between align-items-center bg-white px-5 border-bottom pb-3">
                                 <!-- Search -->
-                                <div class="input-group w-50">
+                                <div class="input-group" style="max-width: 40%;">
                                     <input type="text" class="form-control" placeholder="Search and hit enter">
                                     <button class="btn btn-outline-secondary"><i class="bi bi-search"></i></button>
                                     <button class="btn btn-outline-secondary"><i class="bi bi-x">clear</i></button>
@@ -193,6 +193,12 @@
 
                                 <!-- Action Buttons -->
                                 <div class="">
+                                    <!-- Export Button -->
+                                    <button type="button" class="btn btn-outline-secondary" data-toggle="modal"
+                                        data-target="#export">
+                                        <i class="fa fa-download"></i> Export
+                                        Records
+                                    </button>
                                     <!-- Filter Button -->
                                     <button type="button" class="btn btn-outline-secondary m-1" data-toggle="modal"
                                         data-target="#sidebarModal">
@@ -255,353 +261,390 @@
                                         </div>
                                     </div>
 
-                                    <button class="btn btn-outline-secondary m-1"><i class="bi bi-sort-down"></i>
+                                    <button class="btn btn-outline-secondary"><i class="bi bi-sort-down"></i>
                                         Sort</button>
                                     <button class="btn btn-outline-secondary m-1"><i class="bi bi-table"></i>
                                         Columns</button>
                                 </div>
                             </div>
-                        </div>
-                        <div class="table-responsive">
-                            <table class="table table-hover table-striped tm-table-striped-even mt-3">
-                                <thead>
-                                    <tr class="tm-bg-gray">
-                                        <th scope="col">First name</th>
-                                        <th scope="col" class="text-center">Last name</th>
-                                        <th scope="col" class="text-center">Visitor ID</th>
-                                        <th scope="col" class="text-center">From</th>
-                                        <th scope="col">Company</th>
-                                        <th scope="col">Mobile number</th>
-                                        <th scope="col" class="text-center">Email</th>
-                                        <th scope="col" class="text-center">Visitors Proof</th>
-                                        <th scope="col">Host name</th>
-                                        <th scope="col">Host id</th>
-                                        <th scope="col">Purpose of visit</th>
-                                        <th scope="col" class="text-center">IN Time</th>
-                                        <th scope="col" class="text-center">OUT Time</th>
-                                        <th scope="col">Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="tm-product-name">Ramesh</td>
-                                        <td class="text-center">A</td>
-                                        <td class="text-center">VSTR001</td>
-                                        <td class="text-center">Madurai</td>
-                                        <td class="text-center">APJ</td>
-                                        <td class="text-center">9876543234</td>
-                                        <td class="text-center">ramesh01@gmail.com</td>
-                                        <td class="text-center">Aadhar card</td>
-                                        <td class="text-center">Suresh kumar</td>
-                                        <td class="text-center">Emp001</td>
-                                        <td class="text-center">Interview</td>
-                                        <td><button class="btn btn-light text-center">Check in </button></td>
-                                        <td class="text-center">12:00 PM</td>
-                                        <td class="text-center">
-                                            <div class="dropdown">
-                                                <a class="nav-link text-dark" href="#" id="settingsDropdown"
-                                                    role="button" data-toggle="dropdown" aria-haspopup="true"
-                                                    aria-expanded="false">
-                                                    <i class="bi bi-gear-fill fs-5"></i>
-                                                </a>
-                                                <div class="dropdown-menu" aria-labelledby="settingsDropdown">
-                                                    <a class="dropdown-item" href="View-visitors.html">View</a>
+                            <div class="table-responsive">
+                                <table class="table table-hover table-striped tm-table-striped-even mt-3">
+                                    <thead>
+                                        <tr class="tm-bg-gray">
+                                            <th scope="col">First name</th>
+                                            <th scope="col" class="text-center">Last name</th>
+                                            <th scope="col" class="text-center">Visitor ID</th>
+                                            <th scope="col" class="text-center">From</th>
+                                            <th scope="col">Company</th>
+                                            <th scope="col">Mobile number</th>
+                                            <th scope="col" class="text-center">Email</th>
+                                            <th scope="col" class="text-center">Visitors Proof</th>
+                                            <th scope="col">Host name</th>
+                                            <th scope="col">Host id</th>
+                                            <th scope="col">Purpose of visit</th>
+                                            <th scope="col" class="text-center">IN Time</th>
+                                            <th scope="col" class="text-center">OUT Time</th>
+                                            <th scope="col">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="tm-product-name">Ramesh</td>
+                                            <td class="text-center">A</td>
+                                            <td class="text-center">VSTR001</td>
+                                            <td class="text-center">Madurai</td>
+                                            <td class="text-center">APJ</td>
+                                            <td class="text-center">9876543234</td>
+                                            <td class="text-center">ramesh01@gmail.com</td>
+                                            <td class="text-center">Aadhar card</td>
+                                            <td class="text-center">Suresh kumar</td>
+                                            <td class="text-center">Emp001</td>
+                                            <td class="text-center">Interview</td>
+                                            <td><button class="btn btn-light text-center">Check in </button></td>
+                                            <td class="text-center">12:00 PM</td>
+                                            <td class="text-center">
+                                                <div class="dropdown">
+                                                    <a class="nav-link text-dark" href="#" id="settingsDropdown"
+                                                        role="button" data-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false">
+                                                        <i class="bi bi-gear-fill fs-5"></i>
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="settingsDropdown">
+                                                        <a class="dropdown-item" href="View-visitors.html">View</a>
 
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="tm-product-name">suresh</td>
-                                        <td class="text-center">A</td>
-                                        <td class="text-center">VSTR002</td>
-                                        <td class="text-center">Madurai</td>
-                                        <td class="text-center">APJ</td>
-                                        <td class="text-center">9876543234</td>
-                                        <td class="text-center">ramesh01@gmail.com</td>
-                                        <td class="text-center">Aadhar card</td>
-                                        <td class="text-center">Suresh kumar</td>
-                                        <td class="text-center">Emp001</td>
-                                        <td class="text-center">Interview</td>
-                                        <td><button class="btn btn-light text-center">Check in </button></td>
-                                        <td class="text-center">12:00 PM</td>
-                                        <td class="text-center">
-                                            <div class="dropdown">
-                                                <a class="nav-link text-dark" href="#" id="settingsDropdown"
-                                                    role="button" data-toggle="dropdown" aria-haspopup="true"
-                                                    aria-expanded="false">
-                                                    <i class="bi bi-gear-fill fs-5"></i>
-                                                </a>
-                                                <div class="dropdown-menu" aria-labelledby="settingsDropdown">
-                                                    <a class="dropdown-item" href="View-visitors.html">View</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tm-product-name">suresh</td>
+                                            <td class="text-center">A</td>
+                                            <td class="text-center">VSTR002</td>
+                                            <td class="text-center">Madurai</td>
+                                            <td class="text-center">APJ</td>
+                                            <td class="text-center">9876543234</td>
+                                            <td class="text-center">ramesh01@gmail.com</td>
+                                            <td class="text-center">Aadhar card</td>
+                                            <td class="text-center">Suresh kumar</td>
+                                            <td class="text-center">Emp001</td>
+                                            <td class="text-center">Interview</td>
+                                            <td><button class="btn btn-light text-center">Check in </button></td>
+                                            <td class="text-center">12:00 PM</td>
+                                            <td class="text-center">
+                                                <div class="dropdown">
+                                                    <a class="nav-link text-dark" href="#" id="settingsDropdown"
+                                                        role="button" data-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false">
+                                                        <i class="bi bi-gear-fill fs-5"></i>
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="settingsDropdown">
+                                                        <a class="dropdown-item" href="View-visitors.html">View</a>
 
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="tm-product-name">preethi</td>
-                                        <td class="text-center">A</td>
-                                        <td class="text-center">VSTR003</td>
-                                        <td class="text-center">Madurai</td>
-                                        <td class="text-center">APJ</td>
-                                        <td class="text-center">9876543234</td>
-                                        <td class="text-center">ramesh01@gmail.com</td>
-                                        <td class="text-center">Aadhar card</td>
-                                        <td class="text-center">Suresh kumar</td>
-                                        <td class="text-center">Emp001</td>
-                                        <td class="text-center">Interview</td>
-                                        <td><button class="btn btn-light text-center">Check in </button></td>
-                                        <td class="text-center">12:00 PM</td>
-                                        <td class="text-center">
-                                            <div class="dropdown">
-                                                <a class="nav-link text-dark" href="#" id="settingsDropdown"
-                                                    role="button" data-toggle="dropdown" aria-haspopup="true"
-                                                    aria-expanded="false">
-                                                    <i class="bi bi-gear-fill fs-5"></i>
-                                                </a>
-                                                <div class="dropdown-menu" aria-labelledby="settingsDropdown">
-                                                    <a class="dropdown-item" href="View-visitors.html">View</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tm-product-name">preethi</td>
+                                            <td class="text-center">A</td>
+                                            <td class="text-center">VSTR003</td>
+                                            <td class="text-center">Madurai</td>
+                                            <td class="text-center">APJ</td>
+                                            <td class="text-center">9876543234</td>
+                                            <td class="text-center">ramesh01@gmail.com</td>
+                                            <td class="text-center">Aadhar card</td>
+                                            <td class="text-center">Suresh kumar</td>
+                                            <td class="text-center">Emp001</td>
+                                            <td class="text-center">Interview</td>
+                                            <td><button class="btn btn-light text-center">Check in </button></td>
+                                            <td class="text-center">12:00 PM</td>
+                                            <td class="text-center">
+                                                <div class="dropdown">
+                                                    <a class="nav-link text-dark" href="#" id="settingsDropdown"
+                                                        role="button" data-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false">
+                                                        <i class="bi bi-gear-fill fs-5"></i>
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="settingsDropdown">
+                                                        <a class="dropdown-item" href="View-visitors.html">View</a>
 
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="tm-product-name">leo</td>
-                                        <td class="text-center">A</td>
-                                        <td class="text-center">VSTR004</td>
-                                        <td class="text-center">Madurai</td>
-                                        <td class="text-center">APJ</td>
-                                        <td class="text-center">9876543234</td>
-                                        <td class="text-center">ramesh01@gmail.com</td>
-                                        <td class="text-center">Aadhar card</td>
-                                        <td class="text-center">Suresh kumar</td>
-                                        <td class="text-center">Emp001</td>
-                                        <td class="text-center">Interview</td>
-                                        <td><button class="btn btn-light text-center">Check in </button></td>
-                                        <td class="text-center">12:00 PM</td>
-                                        <td class="text-center">
-                                            <div class="dropdown">
-                                                <a class="nav-link text-dark" href="#" id="settingsDropdown"
-                                                    role="button" data-toggle="dropdown" aria-haspopup="true"
-                                                    aria-expanded="false">
-                                                    <i class="bi bi-gear-fill fs-5"></i>
-                                                </a>
-                                                <div class="dropdown-menu" aria-labelledby="settingsDropdown">
-                                                    <a class="dropdown-item" href="View-visitors.html">View</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tm-product-name">leo</td>
+                                            <td class="text-center">A</td>
+                                            <td class="text-center">VSTR004</td>
+                                            <td class="text-center">Madurai</td>
+                                            <td class="text-center">APJ</td>
+                                            <td class="text-center">9876543234</td>
+                                            <td class="text-center">ramesh01@gmail.com</td>
+                                            <td class="text-center">Aadhar card</td>
+                                            <td class="text-center">Suresh kumar</td>
+                                            <td class="text-center">Emp001</td>
+                                            <td class="text-center">Interview</td>
+                                            <td><button class="btn btn-light text-center">Check in </button></td>
+                                            <td class="text-center">12:00 PM</td>
+                                            <td class="text-center">
+                                                <div class="dropdown">
+                                                    <a class="nav-link text-dark" href="#" id="settingsDropdown"
+                                                        role="button" data-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false">
+                                                        <i class="bi bi-gear-fill fs-5"></i>
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="settingsDropdown">
+                                                        <a class="dropdown-item" href="View-visitors.html">View</a>
 
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="tm-product-name">sathish</td>
-                                        <td class="text-center">A</td>
-                                        <td class="text-center">VSTR005</td>
-                                        <td class="text-center">Madurai</td>
-                                        <td class="text-center">APJ</td>
-                                        <td class="text-center">9876543234</td>
-                                        <td class="text-center">ramesh01@gmail.com</td>
-                                        <td class="text-center">Aadhar card</td>
-                                        <td class="text-center">Suresh kumar</td>
-                                        <td class="text-center">Emp001</td>
-                                        <td class="text-center">Interview</td>
-                                        <td><button class="btn btn-light text-center">Check in </button></td>
-                                        <td class="text-center">12:00 PM</td>
-                                        <td class="text-center">
-                                            <div class="dropdown">
-                                                <a class="nav-link text-dark" href="#" id="settingsDropdown"
-                                                    role="button" data-toggle="dropdown" aria-haspopup="true"
-                                                    aria-expanded="false">
-                                                    <i class="bi bi-gear-fill fs-5"></i>
-                                                </a>
-                                                <div class="dropdown-menu" aria-labelledby="settingsDropdown">
-                                                    <a class="dropdown-item" href="View-visitors.html">View</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tm-product-name">sathish</td>
+                                            <td class="text-center">A</td>
+                                            <td class="text-center">VSTR005</td>
+                                            <td class="text-center">Madurai</td>
+                                            <td class="text-center">APJ</td>
+                                            <td class="text-center">9876543234</td>
+                                            <td class="text-center">ramesh01@gmail.com</td>
+                                            <td class="text-center">Aadhar card</td>
+                                            <td class="text-center">Suresh kumar</td>
+                                            <td class="text-center">Emp001</td>
+                                            <td class="text-center">Interview</td>
+                                            <td><button class="btn btn-light text-center">Check in </button></td>
+                                            <td class="text-center">12:00 PM</td>
+                                            <td class="text-center">
+                                                <div class="dropdown">
+                                                    <a class="nav-link text-dark" href="#" id="settingsDropdown"
+                                                        role="button" data-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false">
+                                                        <i class="bi bi-gear-fill fs-5"></i>
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="settingsDropdown">
+                                                        <a class="dropdown-item" href="View-visitors.html">View</a>
 
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </td>
-                                    </tr>
+                                            </td>
+                                        </tr>
 
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <div class="tm-table-mt tm-table-actions-row">
-                            <div class="tm-table-actions-col-left">
-                                <button class="btn btn-danger">Export Records<i
-                                        class="bi bi-clipboard-data px-2"></i></button>
-
+                                    </tbody>
+                                </table>
                             </div>
-                            <div class="tm-table-actions-col-right">
-                                <span class="tm-pagination-label">Page</span>
-                                <nav aria-label="Page navigation" class="d-inline-block">
-                                    <ul class="pagination tm-pagination">
-                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                        <li class="page-item">
-                                            <span class="tm-dots d-block">...</span>
-                                        </li>
-                                        <li class="page-item"><a class="page-link" href="#">13</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">14</a></li>
-                                    </ul>
-                                </nav>
+
+                            <div class="tm-table-mt tm-table-actions-row d-flex  justify-content-end">
+
+                                <div class="tm-table-actions-col-right">
+                                    <span class="tm-pagination-label">Page</span>
+                                    <nav aria-label="Page navigation" class="d-inline-block">
+                                        <ul class="pagination tm-pagination">
+                                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item">
+                                                <span class="tm-dots d-block">...</span>
+                                            </li>
+                                            <li class="page-item"><a class="page-link" href="#">13</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">14</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
 
-            </div>
-
-        </div>
-    </div>
-
-    <footer class="container-fluid bg-dark text-center text-white py-3 mt-5 mb-0">
-        <p class="mb-0">
-            Copyright &copy; 2018 Admin Dashboard. Created by
-            <a rel="nofollow" href="https://www.tooplate.com" class="text-white tm-footer-link">Tooplate</a>
-        </p>
-    </footer>
-    <!-- jQuery (full version, not slim) -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-
-    <!-- Popper.js (needed for dropdowns, tooltips, modals) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-
-    <!-- Bootstrap 4 JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <div class="modal fade" id="logout" tabindex="-1" role="dialog" aria-labelledby="outTimeModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-
-                <div class="modal-header">
-                    <h5 class="modal-title" id="outTimeModalLabel">Are you sure you want to logout?</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-
-                <div class=" mx-auto my-5">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                    <a href="Visitors-management-portal.html" type="button" class="btn btn-danger">Logout</a>
                 </div>
 
             </div>
         </div>
-    </div>
 
-    <div class="modal fade" id="PrintModal" tabindex="-1" role="dialog" aria-labelledby="outTimeModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
+        <footer class="container-fluid bg-dark text-center text-white py-3 mt-5 mb-0">
+            <p class="mb-0">
+                Copyright &copy; 2018 Admin Dashboard. Created by
+                <a rel="nofollow" href="https://www.tooplate.com" class="text-white tm-footer-link">Tooplate</a>
+            </p>
+        </footer>
+        <!-- jQuery (full version, not slim) -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
-                <div class="modal-header">
-                    <h5 class="modal-title" id="outTimeModalLabel">Confirm checkout</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
+        <!-- Popper.js (needed for dropdowns, tooltips, modals) -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 
-                <div class="col-12 mx-auto">
-                    <p class="px-2 text-center mt-2 mb-1">Image<span class="asterisk"></span></p>
-                    <div class="tm-product-img-dummy mx-auto">
-                        <i class="fas fa-5x fa-cloud-upload-alt"
-                            onclick="document.getElementById('fileInput').click();"></i>
-                    </div>
-                </div>
+        <!-- Bootstrap 4 JS -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="js/validations.js"></script>
 
-                <div class="modal-body">
-                    <div class="mb-0">
-                        <label class="d-inline-block  col-6" for="visitorName"><strong>
-                                Visitor name :
-                            </strong></label>
-                        <p class="d-inline-block  col-5">Leo</p>
+
+
+
+        <div class="modal fade" id="logout" tabindex="-1" role="dialog" aria-labelledby="outTimeModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="outTimeModalLabel">Are you sure you want to logout?</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
-                    <div class="mb-0">
-                        <label class="d-inline-block col-6" for="visitorName"><strong>
-                                Visitor ID :
-                            </strong></label>
-                        <p class="d-inline-block col-5">VSTR001</p>
-                    </div>
-                    <div class="mb-0">
-                        <label class="d-inline-block col-6" for="visitorName"><strong>
-                                Host name :
-                            </strong></label>
-                        <p class="d-inline-block col-5">Manikandan</p>
-                    </div>
-                    <div class="mb-0">
-                        <label class="d-inline-block col-6" for="visitorName"><strong>
-                                Host ID :
-                            </strong></label>
-                        <p class="d-inline-block col-5">EMP001</p>
-                    </div>
-                    <div class="mb-0">
-                        <label class="d-inline-block col-6" for="visitorName"><strong>
-                                Department block :
-                            </strong></label>
-                        <p class="d-inline-block col-5">Block A</p>
-                    </div>
-                    <div class="mb-0">
-                        <label class="d-inline-block col-6" for="visitorName"><strong>
-                                Date / Time :
-                            </strong></label>
-                        <p class="d-inline-block col-5">9/4/2025 / 10:00 AM </p>
-                    </div>
-                    <div class="mb-0">
-                        <label class="d-inline-block col-6" for="visitorName"><strong>
-                                Valid until :
-                            </strong></label>
-                        <p class="d-inline-block col-5">9/4/2025 / 12:00 PM </p>
+
+                    <div class=" mx-auto my-5">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <a href="Visitors-management-portal.html" type="button" class="btn btn-danger">Logout</a>
                     </div>
 
                 </div>
-
-                <div class="modal-footer mx-auto">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                    <a href="Visitors-management.html" type="button" class="btn btn-primary">Print</a>
-                </div>
-
             </div>
         </div>
-    </div>
 
-    <div class="modal fade" id="outTimeModal" tabindex="-1" role="dialog" aria-labelledby="outTimeModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
+        <div class="modal fade" id="PrintModal" tabindex="-1" role="dialog" aria-labelledby="outTimeModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
 
-                <div class="modal-header">
-                    <h5 class="modal-title" id="outTimeModalLabel">Confirm checkout</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="outTimeModalLabel">Confirm checkout</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
 
-                <div class="modal-body">
-                    <div class="form-group">
-                        <label for="visitorName">Visitor feedback :</label>
-                        <textarea type="textarea" row="5" class="form-control" id="visitorName"
-                            placeholder="Feedback"></textarea>
+                    <div class="col-12 mx-auto">
+                        <p class="px-2 text-center mt-2 mb-1">Image<span class="asterisk"></span></p>
+                        <div class="tm-product-img-dummy mx-auto">
+                            <i class="fas fa-5x fa-cloud-upload-alt"
+                                onclick="document.getElementById('fileInput').click();"></i>
+                        </div>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="mb-0">
+                            <label class="d-inline-block  col-6" for="visitorName"><strong>
+                                    Visitor name :
+                                </strong></label>
+                            <p class="d-inline-block  col-5">Leo</p>
+                        </div>
+                        <div class="mb-0">
+                            <label class="d-inline-block col-6" for="visitorName"><strong>
+                                    Visitor ID :
+                                </strong></label>
+                            <p class="d-inline-block col-5">VSTR001</p>
+                        </div>
+                        <div class="mb-0">
+                            <label class="d-inline-block col-6" for="visitorName"><strong>
+                                    Host name :
+                                </strong></label>
+                            <p class="d-inline-block col-5">Manikandan</p>
+                        </div>
+                        <div class="mb-0">
+                            <label class="d-inline-block col-6" for="visitorName"><strong>
+                                    Host ID :
+                                </strong></label>
+                            <p class="d-inline-block col-5">EMP001</p>
+                        </div>
+                        <div class="mb-0">
+                            <label class="d-inline-block col-6" for="visitorName"><strong>
+                                    Department block :
+                                </strong></label>
+                            <p class="d-inline-block col-5">Block A</p>
+                        </div>
+                        <div class="mb-0">
+                            <label class="d-inline-block col-6" for="visitorName"><strong>
+                                    Date / Time :
+                                </strong></label>
+                            <p class="d-inline-block col-5">9/4/2025 / 10:00 AM </p>
+                        </div>
+                        <div class="mb-0">
+                            <label class="d-inline-block col-6" for="visitorName"><strong>
+                                    Valid until :
+                                </strong></label>
+                            <p class="d-inline-block col-5">9/4/2025 / 12:00 PM </p>
+                        </div>
 
                     </div>
-                    <div class="form-group">
-                        <label for="outTimeField">Out Time</label>
-                        <input type="time" class="form-control" id="outTimeField">
+
+                    <div class="modal-footer mx-auto">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <a href="Visitors-management.html" type="button" class="btn btn-primary">Print</a>
                     </div>
-                </div>
 
-                <div class="modal-footer mx-auto">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                    <a href="Visitors-management.html" type="button" class="btn btn-primary">Confirm</a>
                 </div>
-
             </div>
         </div>
-    </div>
+
+        <div class="modal fade" id="outTimeModal" tabindex="-1" role="dialog" aria-labelledby="outTimeModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="outTimeModalLabel">Confirm checkout</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="visitorName">Visitor feedback :</label>
+                            <textarea type="textarea" row="5" class="form-control" id="visitorName"
+                                placeholder="Feedback"></textarea>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="outTimeField">Out Time</label>
+                            <input type="time" class="form-control" id="outTimeField">
+                        </div>
+                    </div>
+
+                    <div class="modal-footer mx-auto">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <a href="Visitors-management.html" type="button" class="btn btn-primary">Confirm</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" tabindex="-1" role="dialog" id="export" aria-labelledby="outTimeModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <form onsubmit="return export1()">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="outTimeModalLabel"><i class="fa fa-download"></i>Export Records
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <div class="form px-3 py-5">
+                            <div class="form-group d-flex align-items-start">
+                                <input type="checkbox" id="pdfinputid">
+                                <label id="pdfid" for="pdfinputid" class="pl-2">Export as PDF </label>
+
+
+                            </div>
+                            <div class="form-group d-flex align-items-start">
+                                <input type="checkbox" id="excelinputid">
+                                <label id="excelid" for="excelinputid" class="pl-2">Export as Excel </label>
+
+
+                            </div>
+                        </div>
+
+                        <div class="modal-footer mx-auto">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Export</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
 </body>
 
 </html>

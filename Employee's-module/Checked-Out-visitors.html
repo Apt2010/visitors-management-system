@@ -185,7 +185,7 @@
                             <div
                                 class="container d-flex justify-content-between align-items-center bg-white px-5 border-bottom pb-3">
                                 <!-- Search -->
-                                <div class="input-group w-50">
+                                <div class="input-group" style="max-width: 40%;">
                                     <input type="text" class="form-control" placeholder="Search and hit enter">
                                     <button class="btn btn-outline-secondary"><i class="bi bi-search"></i></button>
                                     <button class="btn btn-outline-secondary"><i class="bi bi-x">clear</i></button>
@@ -193,6 +193,12 @@
 
                                 <!-- Action Buttons -->
                                 <div class="">
+                                    <!-- Export Button -->
+                                    <button type="button" class="btn btn-outline-secondary" data-toggle="modal"
+                                        data-target="#export">
+                                        <i class="fa fa-download"></i> Export
+                                        Records
+                                    </button>
                                     <!-- Filter Button -->
                                     <button type="button" class="btn btn-outline-secondary m-1" data-toggle="modal"
                                         data-target="#sidebarModal">
@@ -255,7 +261,7 @@
                                         </div>
                                     </div>
 
-                                    <button class="btn btn-outline-secondary m-1"><i class="bi bi-sort-down"></i>
+                                    <button class="btn btn-outline-secondary"><i class="bi bi-sort-down"></i>
                                         Sort</button>
                                     <button class="btn btn-outline-secondary m-1"><i class="bi bi-table"></i>
                                         Columns</button>
@@ -428,12 +434,8 @@
                             </table>
                         </div>
 
-                        <div class="tm-table-mt tm-table-actions-row">
-                            <div class="tm-table-actions-col-left">
-                                <button class="btn btn-danger">Export Records<i
-                                        class="bi bi-clipboard-data px-2"></i></button>
+                        <div class="tm-table-mt tm-table-actions-row d-flex  justify-content-end">
 
-                            </div>
                             <div class="tm-table-actions-col-right">
                                 <span class="tm-pagination-label">Page</span>
                                 <nav aria-label="Page navigation" class="d-inline-block">
@@ -473,6 +475,9 @@
 
     <!-- Bootstrap 4 JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="../js/validations.js"></script>
+
+
 
     <div class="modal fade" id="logout" tabindex="-1" role="dialog" aria-labelledby="outTimeModalLabel"
         aria-hidden="true">
@@ -603,6 +608,45 @@
             </div>
         </div>
     </div>
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="export" aria-labelledby="outTimeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <form onsubmit="return export1()">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="outTimeModalLabel"><i class="fa fa-download"></i>Export Records
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="form px-3 py-5">
+                        <div class="form-group d-flex align-items-start">
+                            <input type="checkbox" id="pdfinputid">
+                            <label id="pdfid" for="pdfinputid" class="pl-2">Export as PDF </label>
+
+
+                        </div>
+                        <div class="form-group d-flex align-items-start">
+                            <input type="checkbox" id="excelinputid">
+                            <label id="excelid" for="excelinputid" class="pl-2">Export as Excel </label>
+
+
+                        </div>
+                    </div>
+
+                    <div class="modal-footer mx-auto">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Export</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
 </body>
 
 </html>

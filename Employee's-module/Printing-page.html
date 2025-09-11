@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add Product - Dashboard Admin Template</title>
+    <!--
+
+    Template 2108 Dashboard
+
+	http://www.tooplate.com/view/2108-dashboard
+
+    -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600">
+    <!-- https://fonts.google.com/specimen/Open+Sans -->
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <!-- https://fontawesome.com/ -->
+    <link rel="stylesheet" href="jquery-ui-datepicker/jquery-ui.min.css" type="text/css" />
+    <!-- http://api.jqueryui.com/datepicker/ -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- https://getbootstrap.com/ -->
+    <link rel="stylesheet" href="css/tooplate.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <style>
+        .asterisk {
+            color: red
+        }
+
+        .rounded-pill {
+            border-radius: 25px;
+        }
+
+        .btn-primary {
+            color: white;
+            background-color: rgb(66, 148, 255);
+        }
+    </style>
+
+</head>
+
+<body class="bg02">
+    <div class="container">
+
+        <!-- row -->
+        <div class="row tm-mt-big mt-5 pt-3 mb-5">
+            <div class="col-12">
+                <div class="bg-white tm-block">
+                    <div class="container">
+                        <form onsubmit="return print1()">
+                            <div class="modal-header d-flex justify-content-center text-center">
+                                <h5 class="modal-title " id="outTimeModalLabel"><i
+                                        class="bi bi-printer-fill pr-2"></i>Print
+                                </h5>
+                            </div>
+
+                            <div class="col-12 mx-auto">
+                                <p class="px-2 text-center mt-2 mb-1">Image<span class="asterisk"></span></p>
+                                <div class="tm-product-img-dummy mx-auto">
+                                    <i class="fas fa-5x fa-cloud-upload-alt"
+                                        onclick="document.getElementById('fileInput').click();"></i>
+                                </div>
+                            </div>
+
+                            <div class="modal-body d-flex-vertical justify-content-center ml-0 ml-md-5">
+                                <div class="mb-0 d-flex justify-content-center col-12">
+                                    <label class="d-inline-block col-6 col-md-5 col-lg-4 col-xl-2 text-left"
+                                        for="visitorName"><strong>
+                                            Visitor name :
+                                        </strong></label>
+                                    <p class="d-inline-block col-6 col-md-5 col-lg-4 col-xl-2 text-center">Leo</p>
+                                </div>
+                                <div class="mb-0 d-flex justify-content-center col-12">
+                                    <label class="d-inline-block col-6 col-md-5 col-lg-4 col-xl-2 text-left"
+                                        for="visitorName"><strong>
+                                            Visitor ID :
+                                        </strong></label>
+                                    <p class="d-inline-block col-6 col-md-5 col-lg-4 col-xl-2 text-center">VSTR001</p>
+                                </div>
+                                <div class="mb-0 d-flex justify-content-center col-12">
+                                    <label class="d-inline-block col-6 col-md-5 col-lg-4 col-xl-2 text-left"
+                                        for="visitorName"><strong>
+                                            Host name :
+                                        </strong></label>
+                                    <p class="d-inline-block col-6 col-md-5 col-lg-4 col-xl-2 text-center">Manikandan
+                                    </p>
+                                </div>
+                                <div class="mb-0 d-flex justify-content-center col-12">
+                                    <label class="d-inline-block col-6 col-md-5 col-lg-4 col-xl-2 text-left"
+                                        for="visitorName"><strong>
+                                            Host ID :
+                                        </strong></label>
+                                    <p class="d-inline-block col-6 col-md-5 col-lg-4 col-xl-2 text-center">EMP001</p>
+                                </div>
+                                <div class="mb-0 d-flex justify-content-center col-12">
+                                    <label class="d-inline-block col-6 col-md-5 col-lg-4 col-xl-2 text-left"
+                                        for="visitorName"><strong>
+                                            Department block :
+                                        </strong></label>
+                                    <p class="d-inline-block col-6 col-md-5 col-lg-4 col-xl-2 text-center">Block A</p>
+                                </div>
+                                <div class="mb-0 d-flex justify-content-center col-12">
+                                    <label class="d-inline-block col-6 col-md-5 col-lg-4 col-xl-2 text-left"
+                                        for="visitorName"><strong>
+                                            Date / Time :
+                                        </strong></label>
+                                    <p class="d-inline-block col-6 col-md-5 col-lg-4 col-xl-2 text-center">9/4/2025 /
+                                        10:00 AM </p>
+                                </div>
+                                <div class="mb-0 d-flex justify-content-center col-12">
+                                    <label class="d-inline-block col-6 col-md-5 col-lg-4 col-xl-2  text-start"
+                                        for="visitorName"><strong>
+                                            Valid until :
+                                        </strong></label>
+                                    <p class="d-inline-block col-6 col-md-5 col-lg-4 col-xl-2 text-center">9/4/2025 /
+                                        12:00 PM </p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="modal-footer d-flex justify-content-center">
+                                <a href="Visitors-management.html" type="button" class="btn btn-secondary">Cancel</a>
+                                <button id="printbtn" type="submit" class="btn btn-primary">Print</button>
+                            </div>
+                        </form>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- https://jquery.com/download/ -->
+    <script src="jquery-ui-datepicker/jquery-ui.min.js"></script>
+    <!-- https://jqueryui.com/download/ -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- https://getbootstrap.com/ -->
+    <script src="js/validations.js"></script>
+
+</html>

@@ -170,7 +170,7 @@
                                 <div class="custom-file mt-3 mb-3 ms-auto">
                                     <input id="fileInput" type="file" accept="image/*" onchange="previewImage(event)" />
                                     <!-- <input id="upload" type="button" class="btn btn-primary d-block ms-auto"
-                                                                    value="Upload ..." onclick="document.getElementById('fileInput').click();" /> -->
+                                                                        value="Upload ..." onclick="document.getElementById('fileInput').click();" /> -->
                                 </div>
                             </div>
                         </div>
@@ -242,6 +242,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="row mb-3 mx-3">
                                     <!-- Email -->
 
@@ -258,13 +259,13 @@
                                         <div class="form-group row">
                                             <label for="email2" class="col-sm-3 col-form-label">IN Time<span
                                                     class="asterisk">*</span></label>
-                                            <button type="button" class="d-inline border-0" id="intime"
+                                            <button type="button" class="d-inline border-0" id="intimebtn"
                                                 onclick="captureTime()">IN-Time</button>
+                                            <input type="hidden" id="intime" name="intime">
                                         </div>
                                     </div>
 
                                 </div>
-
                                 <div class="d-flex justify-content-center mb-3">
 
                                     <div class="col-md-3 px-2">
@@ -282,7 +283,6 @@
                         </div>
                     </form>
                 </div>
-
             </div>
         </div>
 

@@ -108,14 +108,14 @@
 
     <!-- User Manual Content -->
     <div class="container mt-5 mb-5">
-        <h2 class="text-center text-primary mb-5">📘 Visitor Management System – User Manual</h2>
+        <h2 class="text-center text-primary mb-5"> Visitor Management System - User Manual</h2>
 
         <div class="row">
             <!-- Card 1 -->
             <div class="col-md-6 mb-4">
                 <div class="card shadow w-100 h-100">
                     <div class="card-body">
-                        <h4>🔑 Login</h4>
+                        <h4> Login</h4>
                         <p>- Enter your <b>Username</b> and <b>Password</b>.<br>
                             - Click <b>Login</b> to access the system.<br>
                             - If you forget your password, contact the <b>Administrator</b>.
@@ -128,12 +128,12 @@
             <div class="col-md-6 mb-4">
                 <div class="card shadow w-100 h-100">
                     <div class="card-body">
-                        <h4>🏠 Dashboard</h4>
+                        <h4> Dashboard</h4>
                         <p>- After login, you will land on the <b>Dashboard</b>.<br>
                             - You can view quick statistics such as:<br>
-                            ✔ Total Visitors Today<br>
-                            ✔ Upcoming Appointments<br>
-                            ✔ Recently Checked-In Visitors
+                            Total Visitors Today<br>
+                            Upcoming Appointments<br>
+                            Recently Checked-In Visitors
                         </p>
                     </div>
                 </div>
@@ -143,7 +143,7 @@
             <div class="col-md-6 mb-4">
                 <div class="card shadow w-100 h-100">
                     <div class="card-body">
-                        <h4>👤 Employee Module</h4>
+                        <h4> Employee Module</h4>
                         <p>- Employees can view their <b>own details</b>.<br>
                             - They can access <b>visitor records</b> relevant to them.<br>
                             - Employees <b>cannot</b> edit, delete, or block records.
@@ -156,7 +156,7 @@
             <div class="col-md-6 mb-4">
                 <div class="card shadow w-100 h-100">
                     <div class="card-body">
-                        <h4>🧾 Visitor Management</h4>
+                        <h4> Visitor Management</h4>
                         <p><b>Add Visitor:</b><br>
                             1. Go to <b>Visitors → Add Visitor</b>.<br>
                             2. Fill in details: Visitor Name, Purpose, Employee to Meet, Date & Time, ID Proof.<br>
@@ -180,12 +180,12 @@
             <div class="col-md-6 mb-4">
                 <div class="card shadow w-100 h-100">
                     <div class="card-body">
-                        <h4>📊 Reports</h4>
+                        <h4> Reports</h4>
                         <p>- Access reports from <b>Reports → Daily / Weekly / Monthly</b>.<br>
                             - Reports include:<br>
-                            ✔ Number of Visitors per Day<br>
-                            ✔ Visitors per Employee<br>
-                            ✔ Frequent Visitors<br>
+                            Number of Visitors per Day<br>
+                            Visitors per Employee<br>
+                            Frequent Visitors<br>
                             - Reports can be <b>exported</b> (PDF/Excel).
                         </p>
                     </div>
@@ -196,7 +196,7 @@
             <div class="col-md-6 mb-4">
                 <div class="card shadow w-100 h-100">
                     <div class="card-body">
-                        <h4>🆘 Help</h4>
+                        <h4> Help</h4>
                         <p>- This User Guide.<br>
                             - Contact Support → Email / Phone Number.
                         </p>
@@ -208,7 +208,7 @@
             <div class="col-md-6 mb-4">
                 <div class="card shadow w-100 h-100">
                     <div class="card-body">
-                        <h4>🚪 Logout</h4>
+                        <h4> Logout</h4>
                         <p>- Always click <b>Logout</b> after use.<br>
                             - Find the button on the <b>top-right corner</b>.
                         </p>
@@ -220,7 +220,7 @@
             <div class="col-md-6 mb-4">
                 <div class="card shadow w-100 h-100">
                     <div class="card-body">
-                        <h4>✅ Best Practices</h4>
+                        <h4> Best Practices</h4>
                         <ul>
                             <li>Ensure visitor details are accurate.</li>
                             <li>Use search & filters to find records quickly.</li>
@@ -238,6 +238,285 @@
             <p class="mb-0">© 2025 Visitor Management System. All Rights Reserved.</p>
         </div>
     </div>
+
+
+    <div class="container d-flex justify-content-between align-items-center bg-white px-5 border-bottom pb-3">
+        <!-- Search -->
+        <div class="input-group w-50">
+            <input type="text" class="form-control" placeholder="Search and hit enter">
+            <button class="btn btn-outline-secondary"><i class="bi bi-search"></i></button>
+            <button class="btn btn-outline-secondary"><i class="bi bi-x">clear</i></button>
+        </div>
+
+        <!-- Action Buttons -->
+
+        <div class="">
+            <button type="button" class="btn btn-outline-secondary m-1" data-toggle="modal" data-target="#export">
+                <i class="fa fa-download"></i> Export
+                Records
+            </button>
+            <!-- Filter Button -->
+            <button type="button" class="btn btn-outline-secondary m-1" data-toggle="modal" data-target="#sidebarModal">
+                <i class="bi bi-funnel"></i> Filter
+            </button>
+
+            <!-- Sidebar Modal -->
+            <div class="modal fade" id="sidebarModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog bg-danger modal-dialog-slideout modal-sm w-50" role="document">
+                    <div class="modal-content ">
+                        <div class="modal-header d-flex justify-content-between">
+                            <h5 class="modal-title">Filter Options</h5>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+
+                            <!-- Dropdown 1 -->
+                            <div class="dropdown mb-3">
+                                <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="dropdown1"
+                                    data-toggle="dropdown">
+                                    Select Day
+                                </button>
+                                <div class="dropdown-menu w-100">
+                                    <a class="dropdown-item" href="#">Today</a>
+                                    <a class="dropdown-item" href="#">This Week</a>
+                                    <a class="dropdown-item" href="#">This Month</a>
+                                </div>
+                            </div>
+
+                            <!-- Dropdown 2 -->
+                            <div class="dropdown mb-3">
+                                <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="dropdown2"
+                                    data-toggle="dropdown">
+                                    Select Purpose of visit
+                                </button>
+                                <div class="dropdown-menu w-100">
+                                    <a class="dropdown-item" href="#">Interview</a>
+                                    <a class="dropdown-item" href="#">Business</a>
+                                    <a class="dropdown-item" href="#">Official meeting</a>
+                                    <a class="dropdown-item" href="#">Casual</a>
+                                </div>
+                            </div>
+
+                            <!-- Dropdown 3 -->
+                            <div class="dropdown mb-3">
+                                <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="dropdown3"
+                                    data-toggle="dropdown">
+                                    Select Check-In / Check-Out
+                                </button>
+                                <div class="dropdown-menu w-100">
+                                    <a class="dropdown-item" href="#">Checked-In Visitors</a>
+                                    <a class="dropdown-item" href="#">Checked-Out Visitors</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-outline-secondary m-1"><i class="bi bi-sort-down"></i>
+                Sort</button>
+            <button class="btn btn-outline-secondary m-1"><i class="bi bi-table"></i>
+                Columns</button>
+        </div>
+    </div>
+
+    function Admin_login_validation() {
+
+    let username = document.getElementById("username").value.trim();
+    let password = document.getElementById("password").value.trim();
+
+
+    if (username === "") {
+    alert("Username is required");
+    return false;
+    }
+
+    if (password === "") {
+    alert("Password is required");
+    return false;
+    }
+
+    if (password.length < 6) { alert("Password must be at least 6 characters long"); return false; } else return true; }
+        function Employee_login_validation() { let username=document.getElementById('username').value.trim(); let
+        password=document.getElementById('password').value.trim(); if (username==="" ) { alert("Username is required")
+        return false; } if (password==="" ) { alert("Password is required") return false; } if (password.length < 6) {
+        alert("Password must be at least 6 characters long") return false; } return true; } function
+        Employee_validation_Add() { let First_name=document.getElementById('First-name').value.trim(); let
+        Last_name=document.getElementById('Last-name').value.trim(); let
+        Emp_id=document.getElementById('Emp-ID').value.trim(); let
+        Department=document.getElementById('Department').value.trim(); let
+        Department_block=document.getElementById('Department-block').value.trim(); let
+        Role=document.getElementById('Role').value.trim(); let Email=document.getElementById('Email1').value.trim(); let
+        Mobile=document.getElementById('Mobile2').value.trim(); let Shift=document.getElementById('Shift').value.trim();
+        let Date_of_joining=document.getElementById('Date-of-joining').value.trim(); let
+        Salary=document.getElementById('Salary').value.trim(); let
+        Date_of_birth=document.getElementById('Date-of-birth').value.trim(); let
+        Address=document.getElementById('Address').value.trim(); let
+        username=document.getElementById('Username').value.trim(); let imageField=document.getElementById('fileInput');
+        if (!imageField.files || imageField.files.length===0) { alert("Uploading image is required"); return false; }
+        let image=document.getElementById('fileInput').value; if (image==="" ) { alert("uploading image is required")
+        return false; } if (First_name==="" ) { alert("First_name is required") return false; } if (Last_name==="" ) {
+        alert("Last_name is required") return false; } if (Emp_id==="" ) { alert("Emp-id is required") return false; }
+        if (Department==="" ) { alert("Department is required") return false; } if (Department_block==="" ) {
+        alert("Department-block is required") return false; } if (Role==="" ) { alert("Role is required") return false;
+        } let emailpattern=/^[^\s@]+@[^\s@]+\.[^\s@]+$/; if (!emailpattern.test(Email)) { alert("Enter a valid Email")
+        return false; } let phonepattern=/^\d{10}$/; if (!phonepattern.test(Mobile)) { alert("Enter a valid mobile
+        number") return false; } if (Shift==="" ) { alert("Shift is required") return false; } if (Date_of_joining===""
+        ) { alert("Date-of-joining is required") return false; } if (!/^[0-9]+$/.test(Salary)) { alert("Salary must
+        contain only numbers"); return false; } if (parseInt(Salary) <=0) { alert("Salary must be greater than 0");
+        return false; } if (Date_of_birth==="" ) { alert("Date-of-joining is required") return false; } if (Address===""
+        ) { alert("Address is required") return false; } if (username==="" ) { alert("Username is required") return
+        false; } let password=document.getElementById('Password').value.trim(); if (password) { if (password==="" ) {
+        alert("Password is required"); return false; } if (password.length < 6) { alert("Password must be at least 6
+        characters long"); return false; } } return true; } function Employee_validation_Edit() { let
+        image=document.getElementById('fileInput').value; let
+        First_name=document.getElementById('First-name').value.trim(); let
+        Last_name=document.getElementById('Last-name').value.trim(); let
+        Emp_id=document.getElementById('Emp-ID').value.trim(); let
+        Department=document.getElementById('Department').value.trim(); let
+        Department_block=document.getElementById('Department-block').value.trim(); let
+        Role=document.getElementById('Role').value.trim(); let Email=document.getElementById('Email1').value.trim(); let
+        Mobile=document.getElementById('Mobile2').value.trim(); let Shift=document.getElementById('Shift').value.trim();
+        let Date_of_joining=document.getElementById('Date-of-joining').value.trim(); let
+        Salary=document.getElementById('Salary').value.trim(); let
+        Date_of_birth=document.getElementById('Date-of-birth').value.trim(); let
+        Address=document.getElementById('Address').value.trim(); let
+        username=document.getElementById('Username').value.trim(); if (image==="" ) { alert("uploading image is
+        required") return false; } if (First_name==="" ) { alert("First_name is required") return false; } if
+        (Last_name==="" ) { alert("Last_name is required") return false; } if (Emp_id==="" ) { alert("Emp-id is
+        required") return false; } if (Department==="" ) { alert("Department is required") return false; } if
+        (Department_block==="" ) { alert("Department-block is required") return false; } if (Role==="" ) { alert("Role
+        is required") return false; } let emailpattern=/^[^\s@]+@[^\s@]+\.[^\s@]+$/; if (!emailpattern.test(Email)) {
+        alert("Enter a valid Email") return false; } let phonepattern=/^\d{10}$/; if (!phonepattern.test(Mobile)) {
+        alert("Enter a valid mobile number") return false; } if (Shift==="" ) { alert("Shift is required") return false;
+        } if (Date_of_joining==="" ) { alert("Date-of-joining is required") return false; } if
+        (!/^[0-9]+$/.test(Salary)) { alert("Salary must contain only numbers"); return false; } if (parseInt(Salary)
+        <=0) { alert("Salary must be greater than 0"); return false; } if (Date_of_birth==="" ) { alert("Date-of-joining
+        is required") return false; } if (Address==="" ) { alert("Address is required") return false; } if
+        (username==="" ) { alert("Username is required") return false; } return true; } function
+        visitor_validation_add() { let image=document.getElementById('fileInput').value; let
+        First_name=document.getElementById('first-name').value.trim(); let
+        Last_name=document.getElementById('last-name').value.trim(); let
+        Mobile=document.getElementById('mobile1').value.trim(); let
+        Email=document.getElementById('email1').value.trim(); let From=document.getElementById('from').value.trim(); let
+        Purpose_of_visit=document.getElementById('purpose').value.trim(); let
+        Visitors_proof=document.getElementById('visitors-proof').value.trim(); let
+        Host_name=document.getElementById('host-name').value.trim(); let
+        Host_id=document.getElementById('host-id').value.trim(); let Date=document.getElementById('Date').value.trim();
+        let In_time=document.getElementById('intimebtn').value.trim(); if (image==="" ) { alert("uploading image is
+        required") return false; } if (First_name==="" ) { alert("First_name is required") return false; } if
+        (Last_name==="" ) { alert("Last_name is required") return false; } let phonepattern=/^\d{10}$/; if
+        (!phonepattern.test(Mobile)) { alert("Enter a valid mobile number") return false; } let
+        emailpattern=/^[^\s@]+@[^\s@]+\.[^\s@]+$/; if (!emailpattern.test(Email)) { alert("Enter a valid Email") return
+        false; } if (From==="" ) { alert("Address is required") return false; } if (Purpose_of_visit==="" ) {
+        alert("Purpose_of_visit is required") return false; } if (Visitors_proof==="" ) { alert("Visitors_proof is
+        required") return false; } if (Host_name==="" ) { alert("Host_name is required") return false; } if
+        (Host_id==="" ) { alert("Host_id is required") return false; } if (Date==="" ) { alert("Date is required")
+        return false; } if (In_time==="" ) { alert("In_time is required") return false; } return true; } function
+        captureTime() { let now=new Date(); let time=now.toLocaleTimeString([], { hour: '2-digit' , minute: '2-digit'
+        }); // Store in hidden input document.getElementById('intime').value=time; // Show to user
+        document.getElementById('intimeDisplay').innerText=time; } function visitor_validation_edit() { let
+        image=document.getElementById('fileInput').value; let
+        First_name=document.getElementById('first-name').value.trim(); let
+        Last_name=document.getElementById('last-name').value.trim(); let
+        Mobile=document.getElementById('mobile1').value.trim(); let
+        Email=document.getElementById('email1').value.trim(); let From=document.getElementById('from').value.trim(); let
+        Purpose_of_visit=document.getElementById('purpose').value.trim(); let
+        Visitors_proof=document.getElementById('visitors-proof').value.trim(); let
+        Host_name=document.getElementById('host-name').value.trim(); let
+        Host_id=document.getElementById('host-id').value.trim(); let Date=document.getElementById('Date').value.trim();
+        if (image==="" ) { alert("uploading image is required") return false; } if (First_name==="" ) {
+        alert("First_name is required") return false; } if (Last_name==="" ) { alert("Last_name is required") return
+        false; } let phonepattern=/^\d{10}$/; if (!phonepattern.test(Mobile)) { alert("Enter a valid mobile number")
+        return false; } let emailpattern=/^[^\s@]+@[^\s@]+\.[^\s@]+$/; if (!emailpattern.test(Email)) { alert("Enter a
+        valid Email") return false; } if (From==="" ) { alert("Address is required") return false; } if
+        (Purpose_of_visit==="" ) { alert("Purpose_of_visit is required") return false; } if (Visitors_proof==="" ) {
+        alert("Visitors_proof is required") return false; } if (Host_name==="" ) { alert("Host_name is required") return
+        false; } if (Host_id==="" ) { alert("Host_id is required") return false; } if (Date==="" ) { alert("Date is
+        required") return false; } return true; } function intime_button() { document.getElementById('intimebtn').date }
+        function captureTime() { let now=new Date(); // current date & time let
+        hours=String(now.getHours()).padStart(2, '0' ); // 0–23 → 2 digits let
+        minutes=String(now.getMinutes()).padStart(2, '0' ); let seconds=String(now.getSeconds()).padStart(2, '0' ); let
+        currentTime=`${hours}:${minutes}:${seconds}`; document.getElementById('intimebtn').innerHTML=currentTime; //
+        Store time for visitors page localStorage.setItem('inTimebtn', currentTime); } function captureTime() { let
+        now=new Date(); let hours=now.getHours(); let minutes=String(now.getMinutes()).padStart(2, '0' ); let
+        seconds=String(now.getSeconds()).padStart(2, '0' ); let ampm=hours>= 12 ? 'PM' : 'AM';
+        hours = hours % 12;
+        hours = hours ? hours : 12; // Convert 0 -> 12
+
+        let currentTime = `${String(hours).padStart(2, '0')}:${minutes}:${seconds} ${ampm}`;
+        document.getElementById('intimebtn').innerHTML = currentTime;
+        }
+
+        window.onload = function () {
+        let capturedTime = localStorage.getItem('inTimebtn');
+        if (capturedTime) {
+        document.getElementById('intimeCell').innerText = capturedTime;
+        }
+        };
+
+        function previewImage(event) {
+        let file = event.target.files[0];
+        if (file) {
+        let allowedTypes = ["image/jpeg", "image/png"];
+        if (!allowedTypes.includes(file.type)) {
+        alert("Only JPG and PNG formats are allowed!");
+        event.target.value = ""; // Clear the input
+        return false;
+        }
+
+        let reader = new FileReader();
+        reader.onload = function (e) {
+        document.getElementById('imagePreview').innerHTML =
+        `<img src="${e.target.result}" alt="Preview" style="max-width:100%; max-height: 100%; object-fit: contain;" />`;
+        }
+        reader.readAsDataURL(file);
+        }
+        document.getElementById('upload').value = "uploaded"
+        }
+
+
+        function print() {
+        document.getElementById('print').value = window.print();
+        }
+
+        document.getElementById('export').addEventListener('click', function (e) {
+        let pdf = document.getElementById('pdf').checked;
+        let excel = document.getElementById('excel').checked;
+
+        if (!pdf && !excel) {
+        alert("Please select at least one format to export.");
+        e.preventDefault();
+        return false;
+        }
+
+        });
+
+
+        function outtime() {
+        let outtimeField1 = document.getElementById('outTimeField').value.trim();
+        if (outtimeField1 === "") {
+        alert("Out time field is required");
+        return false;
+        }
+
+        return true;
+        }
+
+        function export1() {
+        let pdf1 = document.getElementById('pdfinputid');
+        let excel1 = document.getElementById('excelinputid');
+
+        if (!pdf1.checked && !excel1.checked) {
+        alert("please select atleast one format to export")
+        return false;
+        }
+
+        return true;
+        }
+
+
 </body>
 
 </html>

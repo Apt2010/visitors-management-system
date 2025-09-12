@@ -48,7 +48,7 @@ function Employee_login_validation() {
 }
 
 function Employee_validation_Add() {
-
+    let image = document.getElementById('fileInput').value;
     let First_name = document.getElementById('First-name').value.trim();
     let Last_name = document.getElementById('Last-name').value.trim();
     let Emp_id = document.getElementById('Emp-ID').value.trim();
@@ -63,113 +63,202 @@ function Employee_validation_Add() {
     let Date_of_birth = document.getElementById('Date-of-birth').value.trim();
     let Address = document.getElementById('Address').value.trim();
     let username = document.getElementById('Username').value.trim();
+    let password = document.getElementById('Password').value.trim();
 
 
 
-    let imageField = document.getElementById('fileInput');
-
-    if (!imageField.files || imageField.files.length === 0) {
-        alert("Uploading image is required");
-        return false;
-    }
 
 
-    let image = document.getElementById('fileInput').value;
+
+
     if (image === "") {
-
-        alert("uploading image is required")
+        document.getElementById('image').innerHTML = "image is required";
+        alert("Visitor photo is required")
         return false;
     }
+    else {
+        document.getElementById('image').innerHTML = "";
+
+    }
+
 
     if (First_name === "") {
-        alert("First_name is required")
+
+        document.getElementById('firstname').innerHTML = "First name is required";
         return false;
     }
+    else {
+        document.getElementById('firstname').innerHTML = "";
+
+    }
+
 
     if (Last_name === "") {
-        alert("Last_name is required")
+
+        document.getElementById('lastname').innerHTML = "Last name is required";
         return false;
+    }
+    else {
+        document.getElementById('lastname').innerHTML = "";
+
     }
 
     if (Emp_id === "") {
-        alert("Emp-id is required")
+
+        document.getElementById('empid').innerHTML = "Emp ID is required";
         return false;
+    }
+    else {
+        document.getElementById('empid').innerHTML = "";
+
     }
 
     if (Department === "") {
-        alert("Department is required")
+
+        document.getElementById('department').innerHTML = "Department is required";
         return false;
+    }
+    else {
+        document.getElementById('department').innerHTML = "";
+
     }
 
     if (Department_block === "") {
-        alert("Department-block is required")
+
+        document.getElementById('department-block').innerHTML = "Department-block is required";
         return false;
+    }
+    else {
+        document.getElementById('department-block').innerHTML = "";
+
     }
 
     if (Role === "") {
-        alert("Role is required")
+
+        document.getElementById('role').innerHTML = "Role is required";
+
         return false;
     }
+    else {
+        document.getElementById('role').innerHTML = "";
+
+    }
+
 
     let emailpattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailpattern.test(Email)) {
-        alert("Enter a valid Email")
+        document.getElementById('email').innerHTML = "email is required";
+
         return false;
     }
+    else {
+        document.getElementById('email').innerHTML = "";
+
+    }
+
 
     let phonepattern = /^\d{10}$/;
     if (!phonepattern.test(Mobile)) {
-        alert("Enter a valid mobile number")
+        document.getElementById('mobile').innerHTML = "Enter a valid mobile number is required";
+
         return false;
     }
+    else {
+        document.getElementById('mobile').innerHTML = "";
+
+    }
+
 
     if (Shift === "") {
-        alert("Shift is required")
+        document.getElementById('shift').innerHTML = "shift is required";
+
         return false;
     }
+    else {
+        document.getElementById('shift').innerHTML = "";
+
+    }
+
 
     if (Date_of_joining === "") {
-        alert("Date-of-joining is required")
+        document.getElementById('doj').innerHTML = "data of joining is required";
+
         return false;
+    }
+    else {
+        document.getElementById('doj').innerHTML = "";
+
     }
 
 
     if (!/^[0-9]+$/.test(Salary)) {
-        alert("Salary must contain only numbers");
+        document.getElementById('salary').innerHTML = "salary is required";
+
         return false;
+    }
+    else {
+        document.getElementById('salary').innerHTML = "";
+
     }
 
     if (parseInt(Salary) <= 0) {
-        alert("Salary must be greater than 0");
+        document.getElementById('salary').innerHTML = "salary is required";
+
         return false;
     }
+    else {
+        document.getElementById('salary').innerHTML = "";
+
+    }
+
     if (Date_of_birth === "") {
-        alert("Date-of-joining is required")
+        document.getElementById('dob').innerHTML = "date of birth is required";
+
         return false;
+    }
+    else {
+        document.getElementById('dob').innerHTML = "";
+
     }
 
     if (Address === "") {
-        alert("Address is required")
+        document.getElementById('address').innerHTML = "address is required";
+
         return false;
+    }
+    else {
+        document.getElementById('address').innerHTML = "";
+
     }
 
     if (username === "") {
-        alert("Username is required")
+        document.getElementById('username').innerHTML = "username is required";
+
         return false;
     }
+    else {
+        document.getElementById('username').innerHTML = "";
 
+    }
 
-    let password = document.getElementById('Password').value.trim();
-    if (password) {
+    if (password === "") {
+        document.getElementById('password').innerHTML = "password is required";
 
-        if (password === "") {
-            alert("Password is required");
-            return false;
-        }
-        if (password.length < 6) {
-            alert("Password must be at least 6 characters long");
-            return false;
-        }
+        return false;
+    }
+    else {
+        document.getElementById('password').innerHTML = "";
+
+    }
+
+    if (password.length < 6) {
+        document.getElementById('role').innerHTML = "password is required";
+
+        return false;
+    }
+    else {
+        document.getElementById('password').innerHTML = "";
+
     }
 
 
@@ -198,22 +287,22 @@ function Employee_validation_Edit() {
 
 
     if (image === "") {
-        alert("uploading image is required")
+        alert("Visitor photo is required")
         return false;
     }
 
     if (First_name === "") {
-        alert("First_name is required")
+        alert("First name is required")
         return false;
     }
 
     if (Last_name === "") {
-        alert("Last_name is required")
+        alert("Last name is required")
         return false;
     }
 
     if (Emp_id === "") {
-        alert("Emp-id is required")
+        alert("Emp id is required")
         return false;
     }
 
@@ -250,7 +339,7 @@ function Employee_validation_Edit() {
     }
 
     if (Date_of_joining === "") {
-        alert("Date-of-joining is required")
+        alert("Date of joining is required")
         return false;
     }
 
@@ -264,8 +353,9 @@ function Employee_validation_Edit() {
         alert("Salary must be greater than 0");
         return false;
     }
+
     if (Date_of_birth === "") {
-        alert("Date-of-joining is required")
+        alert("Date of joining is required")
         return false;
     }
 
@@ -300,17 +390,17 @@ function visitor_validation_add() {
 
 
     if (image === "") {
-        alert("uploading image is required")
+        alert("Visitor photo is required")
         return false;
     }
 
     if (First_name === "") {
-        alert("First_name is required")
+        alert("First name is required")
         return false;
     }
 
     if (Last_name === "") {
-        alert("Last_name is required")
+        alert("Last name is required")
         return false;
     }
 
@@ -332,22 +422,22 @@ function visitor_validation_add() {
     }
 
     if (Purpose_of_visit === "") {
-        alert("Purpose_of_visit is required")
+        alert("Purpose of visit is required")
         return false;
     }
 
     if (Visitors_proof === "") {
-        alert("Visitors_proof is required")
+        alert("Visitors proof is required")
         return false;
     }
 
     if (Host_name === "") {
-        alert("Host_name is required")
+        alert("Host name is required")
         return false;
     }
 
     if (Host_id === "") {
-        alert("Host_id is required")
+        alert("Host id is required")
         return false;
     }
 
@@ -357,7 +447,7 @@ function visitor_validation_add() {
     }
 
     if (In_time === "") {
-        alert("In_time is required")
+        alert("In time is required")
         return false;
     }
 
@@ -384,17 +474,17 @@ function visitor_validation_edit() {
 
 
     if (image === "") {
-        alert("uploading image is required")
+        alert("Visitor photo is required")
         return false;
     }
 
     if (First_name === "") {
-        alert("First_name is required")
+        alert("First name is required")
         return false;
     }
 
     if (Last_name === "") {
-        alert("Last_name is required")
+        alert("Last name is required")
         return false;
     }
 
@@ -416,22 +506,22 @@ function visitor_validation_edit() {
     }
 
     if (Purpose_of_visit === "") {
-        alert("Purpose_of_visit is required")
+        alert("Purpose of visit is required")
         return false;
     }
 
     if (Visitors_proof === "") {
-        alert("Visitors_proof is required")
+        alert("Visitors proof is required")
         return false;
     }
 
     if (Host_name === "") {
-        alert("Host_name is required")
+        alert("Host name is required")
         return false;
     }
 
     if (Host_id === "") {
-        alert("Host_id is required")
+        alert("Host id is required")
         return false;
     }
 
@@ -440,14 +530,12 @@ function visitor_validation_edit() {
         return false;
     }
 
-
     return true;
 
 }
 
 function intime_button() {
     document.getElementById('intimebtn').date
-
 }
 
 
@@ -487,13 +575,14 @@ function previewImage(event) {
         let reader = new FileReader();
         reader.onload = function (e) {
             document.getElementById('imagePreview').innerHTML =
-                `<img src="${e.target.result}" alt="Preview" style="max-width:100%; max-height: 100%; object-fit: contain;" />`;
+                `<img src="${e.target.result}" alt="Preview" style="max-width:100%; max-height: 100%; object-fit: contain;"  />`;
         }
         reader.readAsDataURL(file);
     }
     document.getElementById('upload').value = "uploaded"
 }
-
+// for setting the capturedtime in the visitor management page's intime list, when clicking the submit, the captured in time should be get in a array and after that the after submitting it goes to the visitors manaegment page(list page) at
+// that the captured intime which is in array need to be in the local storage when so in the visitors hit page have to code like onload the captured intime have to fill the empty space in time
 
 function print1(event) {
     window.print();
@@ -501,24 +590,10 @@ function print1(event) {
 
 }
 
-
-document.getElementById('export').addEventListener('click', function (e) {
-    let pdf = document.getElementById('pdf').checked;
-    let excel = document.getElementById('excel').checked;
-
-    if (!pdf && !excel) {
-        alert("Please select at least one format to export.");
-        e.preventDefault();
-        return false;
-    }
-
-});
-
-
 function outtime() {
     let outtimeField1 = document.getElementById('outTimeField').value.trim();
     if (outtimeField1 === "") {
-        alert("Out time field is required");
+        alert("Out time is required");
         return false;
     }
 
@@ -530,7 +605,7 @@ function export1() {
     let excel1 = document.getElementById('excelinputid');
 
     if (!pdf1.checked && !excel1.checked) {
-        alert("please select atleast one format to export")
+        alert("Select at least one file format to proceed with export.")
         return false;
     }
 

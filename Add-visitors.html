@@ -38,6 +38,10 @@
         .rounded-pill {
             border-radius: 25px;
         }
+
+        .hoverstyle:hover {
+            cursor: pointer;
+        }
     </style>
 
 </head>
@@ -167,7 +171,7 @@
                                     <i class="fas fa-5x fa-cloud-upload-alt"
                                         onclick="document.getElementById('fileInput').click();"></i>
                                 </div>
-                                <div class="custom-file mt-3 mb-3 ms-auto">
+                                <div class="custom-file mt-3 mb-3 ms-auto ">
                                     <input id="fileInput" type="file" accept="image/*" onchange="previewImage(event)" />
                                     <!-- <input id="upload" type="button" class="btn btn-primary d-block ms-auto"
                                                                         value="Upload ..." onclick="document.getElementById('fileInput').click();" /> -->
@@ -259,7 +263,7 @@
                                         <div class="form-group row">
                                             <label for="email2" class="col-sm-3 col-form-label">IN Time<span
                                                     class="asterisk">*</span></label>
-                                            <button type="button" class="d-inline border-0" id="intimebtn"
+                                            <button type="button" class="d-inline border-0 hoverstyle" id="intimebtn"
                                                 onclick="captureTime()">IN-Time</button>
                                             <input type="hidden" id="intime" name="intime">
                                         </div>

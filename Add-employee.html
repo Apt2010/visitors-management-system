@@ -126,36 +126,45 @@
                         class="tm-edit-product-form">
                         <div class="row mt-4 tm-edit-product-row">
                             <div class="col-xl-7 col-lg-7 col-md-12">
-
-                                <div class="input-group mb-5">
+                                <div class="input-group">
                                     <label for="First-name" class="col-xl-3 col-lg-4 col-md-3 col-sm-5 col-form-label">
                                         First name<span class="asterisk">*</span>
                                     </label>
                                     <input id="First-name" name="First-name" type="text"
                                         class="form-control validate col-xl-7 col-lg-8 col-md-9 col-sm-7">
+
                                 </div>
-                                <div class="input-group mb-5">
+                                <div class="text-danger d-block mt-2 mb-4 col-12 col-md-6 col-lg-6 col-xl-6 mx-auto pl-0 pl-lg-5 pl-xl-0"
+                                    id="firstname"></div>
+
+                                <div class="input-group">
                                     <label for="Last-name" class="col-xl-3 col-lg-4 col-md-3 col-sm-5 col-form-label">
                                         Last name<span class="asterisk">*</span>
                                     </label>
                                     <input id="Last-name" name="Last-name" type="text"
                                         class="form-control validate col-xl-7 col-lg-8 col-md-9 col-sm-7">
                                 </div>
-                                <div class="input-group mb-5">
+                                <div class="text-danger d-block mt-2 mb-4 col-12 col-md-6 col-lg-6 col-xl-6 mx-auto pl-0 pl-lg-5 pl-xl-0"
+                                    id="lastname"></div>
+                                <div class="input-group">
                                     <label for="Emp-ID" class="col-xl-3 col-lg-4 col-md-3 col-sm-5 col-form-label">
                                         Emp ID<span class="asterisk">*</span>
                                     </label>
                                     <input id="Emp-ID" name="Emp-ID" type="text"
                                         class="form-control validate col-xl-7 col-lg-8 col-md-9 col-sm-7">
                                 </div>
-                                <div class="input-group mb-5">
+                                <div class="text-danger d-block mt-2 mb-4 col-12 col-md-6 col-lg-6 col-xl-6 mx-auto pl-0 pl-lg-5 pl-xl-0"
+                                    id="empid"></div>
+                                <div class="input-group">
                                     <label for="Department" class="col-xl-3 col-lg-4 col-md-3 col-sm-5 col-form-label">
                                         Department<span class="asterisk">*</span>
                                     </label>
                                     <input id="Department" name="Department" type="text"
                                         class="form-control validate col-xl-7 col-lg-8 col-md-9 col-sm-7">
                                 </div>
-                                <div class="input-group mb-5">
+                                <div class="text-danger d-block mt-2 mb-4 col-12 col-md-6 col-lg-6 col-xl-6 mx-auto pl-0 pl-lg-5 pl-xl-0"
+                                    id="department"></div>
+                                <div class="input-group">
                                     <label for="Department-block"
                                         class="col-xl-3 col-lg-4 col-md-3 col-sm-5 col-form-label">
                                         Department block<span class="asterisk">*</span>
@@ -163,6 +172,8 @@
                                     <input id="Department-block" name="Department-block" type="text"
                                         class="form-control validate col-xl-7 col-lg-8 col-md-9 col-sm-7">
                                 </div>
+                                <div class="text-danger d-block mt-2 mb-4 col-12 col-md-6 col-lg-6 col-xl-6 mx-auto pl-0 pl-lg-5 pl-xl-0"
+                                    id="department-block"></div>
 
 
                             </div>
@@ -181,6 +192,8 @@
                                         value="Upload ..." onclick="document.getElementById('fileInput').click();" /> -->
                                 </div>
                             </div>
+                            <div class="text-danger d-block mt-2 mb-4 col-12 col-md-6 col-lg-6 col-xl-6 mx-auto pl-0 pl-lg-5 pl-xl-0"
+                                id="image"></div>
 
 
 
@@ -191,145 +204,161 @@
 
                             <!-- Extra Fields -->
                             <div class="col-12">
-                                <div class="mb-5 row">
+                                <div class="row">
                                     <label for="Role"
                                         class="col-md-3 col-sm-12 col-lg-2 col-form-label pl-sm-0 pl-md-4">Role<span
                                             class="asterisk">*</span></label>
                                     <div class="col-sm-12 col-md-9 col-lg-10">
-                                        <input id="Role" name="Role" type="text" class="form-control validate">
+                                        <input id="Role" name="Role" type="text" class="form-control validate mb-2
+                                        ">
                                     </div>
                                 </div>
-
-                                <div class="mb-5 row">
-                                    <label for="Email1"
-                                        class="col-md-3 col-sm-3 col-lg-2 col-form-label pl-sm-0 pl-md-4">Email<span
-                                            class="asterisk">*</span></label>
-                                    <div class="col-sm-9 col-md-9 col-lg-10">
-                                        <input id="Email1" name="Email1" type="email" class="form-control validate">
-                                    </div>
-                                </div>
-
-                                <div class="row mb-3">
-                                    <!-- Mobile -->
-
-
-                                    <div class="col-lg-6">
-                                        <div class="form-group row">
-                                            <label for="Mobile2" class="col-sm-3 col-form-label pl-sm-0 pl-md-4">Mobile
-                                                number<span class="asterisk">*</span></label>
-                                            <div class="col-sm-9">
-                                                <input id="Mobile2" name="Mobile2" type="tel" class="form-control">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Email -->
-                                    <div class="col-lg-6">
-                                        <div class="form-group row">
-                                            <label for="Shift"
-                                                class="col-sm-3 col-form-label pl-sm-0 pl-md-4">Shift<span
-                                                    class="asterisk">*</span></label>
-                                            <div class="col-sm-9">
-                                                <input id="Shift" name="Shift" type="text" class="form-control">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <!-- Mobile -->
-                                    <div class="col-lg-6">
-                                        <div class="form-group row">
-                                            <label for="Date-of-joining"
-                                                class="col-sm-3 col-form-label pl-sm-0 pl-md-4">Date of
-                                                joining<span class="asterisk">*</span></label>
-                                            <div class="col-sm-9">
-                                                <input id="Date-of-joining" name="Date-of-joining" type="date"
-                                                    class="form-control">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Email -->
-                                    <div class="col-lg-6">
-                                        <div class="form-group row">
-                                            <label for="Salary"
-                                                class="col-sm-3 col-form-label pl-sm-0 pl-md-4">Salary<span
-                                                    class="asterisk">*</span></label>
-                                            <div class="col-sm-9">
-                                                <input id="Salary" name="Salary" type="text" class="form-control">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <!-- Mobile -->
-                                    <div class="col-lg-6">
-                                        <div class="form-group row">
-                                            <label for="Date-of-birth"
-                                                class="col-sm-3 col-form-label pl-sm-0 pl-md-4">Date of
-                                                birth<span class="asterisk">*</span></label>
-                                            <div class="col-sm-9">
-                                                <input id="Date-of-birth" name="Date-of-birth" type="date"
-                                                    class="form-control">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Email -->
-                                    <div class="col-lg-6">
-                                        <div class="form-group row">
-                                            <label for="Address"
-                                                class="col-sm-3 col-form-label pl-sm-0 pl-md-4">Address<span
-                                                    class="asterisk">*</span></label>
-                                            <div class="col-sm-9">
-                                                <input id="Address" name="Address" type="text" class="form-control">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <!-- Mobile -->
-                                    <div class="col-lg-6">
-                                        <div class="form-group row">
-                                            <label for="Username"
-                                                class="col-sm-3 col-form-label pl-sm-0 pl-md-4 ">Username<span
-                                                    class="asterisk">*</span></label>
-                                            <div class="col-sm-9">
-                                                <input id="Username" name="Username" type="text" class="form-control">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Email -->
-                                    <div class="col-lg-6">
-                                        <div class="form-group row">
-                                            <label for="Password"
-                                                class="col-sm-3 col-form-label pl-sm-0 pl-md-4">Password<span
-                                                    class="asterisk">*</span></label>
-                                            <div class="col-sm-9">
-                                                <input id="Password" name="Password" type="text" class="form-control">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="d-flex justify-content-center mb-3">
-                                    <div class="col-md-3 px-2">
-                                        <a href="Employee-management.html"
-                                            class="btn btn-primary border-0 rounded-pill text-white w-100 bg-danger">Cancel</a>
-                                    </div>
-                                    <div class="col-md-3 px-2">
-                                        <button href="Employee-management.html" type="submit"
-                                            class="btn btn-primary border-0 rounded-pill text-white w-100 bg-success">Submit</button>
-                                    </div>
-
-                                </div>
+                                <div class="text-danger d-bloc mb-4 col-12 col-md-6 pl-md-2 mx-md-auto col-lg-9 pl-lg-5 pr-lg-0 col-xl-8 pl-xl-1 pl-0 pl-xl-0"
+                                    id="role"></div>
                             </div>
                         </div>
-                    </form>
 
+                        <div class="mb-5 row">
+                            <label for="Email1"
+                                class="col-md-3 col-sm-3 col-lg-2 col-form-label pl-sm-0 pl-md-4">Email<span
+                                    class="asterisk">*</span></label>
+                            <div class="col-sm-9 col-md-9 col-lg-10">
+                                <input id="Email1" name="Email1" type="email" class="form-control validate mb-2">
+                            </div>
+                            <div class="text-danger d-bloc mb-4 col-12 col-md-6 pl-md-2 mx-md-auto col-lg-9 pl-lg-5 pr-lg-0 col-xl-8 pl-xl-3 pl-3"
+                                id="email"></div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <!-- Mobile -->
+
+
+                            <div class="col-lg-6">
+                                <div class="form-group row mb-0">
+                                    <label for="Mobile2" class="col-sm-3 col-form-label pl-sm-0 pl-md-4">Mobile
+                                        number<span class="asterisk">*</span></label>
+                                    <div class="col-sm-9">
+                                        <input id="Mobile2" name="Mobile2" type="tel" class="form-control mb-2">
+                                    </div>
+                                </div>
+                                <div class="text-danger d-bloc mb-4 col-12 col-md-6 pl-sm-0 pl-md-2 pl-xl-2 mx-md-auto mx-lg-start col-lg-9 pl-lg-5 pr-lg-0 col-xl-6"
+                                    id="mobile"></div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="col-lg-6">
+                                <div class="form-group row mb-0">
+                                    <label for="Shift" class="col-sm-3 col-form-label pl-sm-0 pl-md-4">Shift<span
+                                            class="asterisk">*</span></label>
+                                    <div class="col-sm-9">
+                                        <input id="Shift" name="Shift" type="text" class="form-control mb-2">
+                                    </div>
+                                </div>
+                                <div class="text-danger d-bloc mb-4 col-12 col-md-6 pl-sm-0 pl-md-2 pl-xl-2 mx-md-auto mx-lg-start col-lg-9 pl-lg-5 pr-lg-0 col-xl-6"
+                                    id="shift"></div>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <!-- Mobile -->
+                            <div class="col-lg-6">
+                                <div class="form-group row mb-0">
+                                    <label for="Date-of-joining" class="col-sm-3 col-form-label pl-sm-0 pl-md-4">Date of
+                                        joining<span class="asterisk">*</span></label>
+                                    <div class="col-sm-9">
+                                        <input id="Date-of-joining" name="Date-of-joining" type="date"
+                                            class="form-control mb-2">
+                                    </div>
+                                </div>
+                                <div class="text-danger d-bloc mb-4 col-12 col-md-6 pl-sm-0 pl-md-2 pl-xl-2 mx-md-auto mx-lg-start col-lg-9 pl-lg-5 pr-lg-0 col-xl-6"
+                                    id="doj"></div>
+                            </div>
+                            <!-- Email -->
+                            <div class="col-lg-6">
+                                <div class="form-group row mb-0">
+                                    <label for="Salary" class="col-sm-3 col-form-label pl-sm-0 pl-md-4">Salary<span
+                                            class="asterisk">*</span></label>
+                                    <div class="col-sm-9">
+                                        <input id="Salary" name="Salary" type="text" class="form-control mb-2">
+                                    </div>
+                                </div>
+                                <div class="text-danger d-bloc mb-4 col-12 col-md-6 pl-sm-0 pl-md-2 pl-xl-2 mx-md-auto mx-lg-start col-lg-9 pl-lg-5 pr-lg-0 col-xl-6"
+                                    id="salary"></div>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <!-- Mobile -->
+                            <div class="col-lg-6">
+                                <div class="form-group row mb-0">
+                                    <label for="Date-of-birth" class="col-sm-3 col-form-label pl-sm-0 pl-md-4">Date
+                                        of
+                                        birth<span class="asterisk">*</span></label>
+                                    <div class="col-sm-9">
+                                        <input id="Date-of-birth" name="Date-of-birth" type="date"
+                                            class="form-control mb-2">
+                                    </div>
+                                </div>
+                                <div class="text-danger d-bloc mb-4 col-12 col-md-6 pl-sm-0 pl-md-2 pl-xl-2 mx-md-auto mx-lg-start col-lg-9 pl-lg-5 pr-lg-0 col-xl-6"
+                                    id="dob"></div>
+                            </div>
+                            <!-- Email -->
+                            <div class="col-lg-6">
+                                <div class="form-group row mb-0">
+                                    <label for="Address" class="col-sm-3 col-form-label pl-sm-0 pl-md-4">Address<span
+                                            class="asterisk">*</span></label>
+                                    <div class="col-sm-9">
+                                        <input id="Address" name="Address" type="text" class="form-control mb-2">
+                                    </div>
+                                </div>
+                                <div class="text-danger d-bloc mb-4 col-12 col-md-6 pl-sm-0 pl-md-2 pl-xl-2 mx-md-auto mx-lg-start col-lg-9 pl-lg-5 pr-lg-0 col-xl-6"
+                                    id="address"></div>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <!-- Mobile -->
+                            <div class="col-lg-6">
+                                <div class="form-group row mb-0">
+                                    <label for="Username" class="col-sm-3 col-form-label pl-sm-0 pl-md-4 ">Username<span
+                                            class="asterisk">*</span></label>
+                                    <div class="col-sm-9">
+                                        <input id="Username" name="Username" type="text" class="form-control mb-2">
+                                    </div>
+                                </div>
+                                <div class="text-danger d-bloc mb-4 col-12 col-md-6 pl-sm-0 pl-md-2 pl-xl-2 mx-md-auto mx-lg-start col-lg-9 pl-lg-5 pr-lg-0 col-xl-6"
+                                    id="username"></div>
+                            </div>
+                            <!-- Email -->
+                            <div class="col-lg-6">
+                                <div class="form-group row mb-0">
+                                    <label for="Password" class="col-sm-3 col-form-label pl-sm-0 pl-md-4">Password<span
+                                            class="asterisk">*</span></label>
+                                    <div class="col-sm-9 ">
+                                        <input id="Password" name="Password" type="text" class="form-control mb-2">
+                                    </div>
+                                </div>
+                                <div class="text-danger d-bloc mb-4 col-12 col-md-6 pl-sm-0 pl-md-2 pl-xl-2 mx-md-auto mx-lg-start col-lg-9 pl-lg-5 pr-lg-0 col-xl-6"
+                                    id="password"></div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-center mb-3">
+                            <div class="col-md-3 px-2">
+                                <a href="Employee-management.html"
+                                    class="btn btn-primary border-0 rounded-pill text-white w-100 bg-danger">Cancel</a>
+                            </div>
+                            <div class="col-md-3 px-2">
+                                <button href="Employee-management.html" type="submit"
+                                    class="btn btn-primary border-0 rounded-pill text-white w-100 bg-success">Submit</button>
+                            </div>
+
+                        </div>
                 </div>
             </div>
+            </form>
+
         </div>
     </div>
-    <button type="button" onclick="captureTime()">Capture Time</button>
+    </div>
+    </div>
 
     <footer class="container-fluid bg-dark text-center text-white py-3 mt-5 mb-0">
         <p class="mb-0">
